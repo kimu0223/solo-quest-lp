@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter } from "next/font/google"; // もし日本語フォント(Noto Sans JPなど)を使う場合はここで変更
 import Script from "next/script";
 import "./globals.css";
-// HeaderとFooterは page.tsx 内で実装しているため、ここでは読み込みません
-// import Header from "@/components/Header"; 
-// import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Solo Quest | 親の「早くしなさい」をAIが「すごい！」に変える",
   description: "子供が声でがんばったことを報告すると、AIがRPGの口調で称賛。自律性を福利のように積み上げる、新しい教育体験アプリ。",
-  metadataBase: new URL('https://solo-quest.jp'), // 正しいドメインに変更済み
+  metadataBase: new URL('https://solo-quest.jp'),
 };
 
 export default function RootLayout({
@@ -21,14 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className="scroll-smooth">
-      {/* デザイン変更：
-        背景色: クリーム色(#FFF9E5) 
-        文字色: ブラウン(#4E342E) 
-        フォント: Inter (日本語フォント指定があればそちらを優先しますが、一旦このままでOK)
+      {/* 改善点：
+        - bg-white: 背景を純白にしてコントラストを最強にする
+        - text-slate-900: 文字色を「真っ黒に近い濃紺」にして、柔らかさと読みやすさを両立
       */}
-      <body className={`${inter.className} bg-[#FFF9E5] text-[#4E342E] min-h-screen flex flex-col`}>
+      <body className={`${inter.className} bg-white text-slate-900 min-h-screen flex flex-col antialiased`}>
         
-        {/* Google Analytics (GA4) */}
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-284MJPXY48"
           strategy="afterInteractive"
@@ -42,9 +38,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* page.tsx 側でヘッダー・フッターを実装しているため、
-          ここでは children だけを表示します。
-        */}
         <div className="flex-grow">
           {children}
         </div>

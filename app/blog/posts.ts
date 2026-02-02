@@ -1,5 +1,3 @@
-// ここに記事を追加していくだけでOKです！
-
 export type BlogPost = {
     id: number;
     title: string;
@@ -11,6 +9,15 @@ export type BlogPost = {
   };
   
   export const BLOG_POSTS: BlogPost[] = [
+    {
+      id: 4,
+      title: "「すごいね！」は逆効果？AIが教える「伸びる」褒め方",
+      excerpt: "子供を褒めるとき、つい「すごい！」「えらい！」と言っていませんか？実は心理学的には、具体的なフィードバックこそがやる気の炎を燃やす薪になるんです。",
+      date: "2026.02.04",
+      category: "心理学",
+      tags: ["自己効力感", "褒め方", "AI活用"],
+      emoji: "🔥",
+    },
     {
       id: 1,
       title: "「宿題しなさい！」と言わなくなる魔法の言葉",

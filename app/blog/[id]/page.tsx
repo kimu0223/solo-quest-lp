@@ -64,6 +64,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
             className="prose prose-slate prose-lg max-w-none prose-headings:font-bold prose-headings:text-teal-800 prose-p:leading-relaxed prose-a:text-teal-600 hover:prose-a:text-teal-500"
             dangerouslySetInnerHTML={{ __html: post.content }} 
           />
+          
+          {/* ▼▼▼ 追加: 記事下のCTAエリア ▼▼▼ */}
+          <div className="mt-16 pt-10 border-t border-slate-200">
+            <div className="bg-gradient-to-br from-teal-50 to-lime-50 rounded-2xl p-8 text-center border border-teal-100">
+              <h3 className="text-xl font-bold text-slate-800 mb-2">この記事の内容を、アプリで実践しませんか？</h3>
+              <p className="text-slate-600 mb-6 text-sm">
+                Solo Questなら、AIが子供の「できた！」を全力で褒めて伸ばします。
+              </p>
+              <Link href="/" className="inline-block bg-teal-500 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-teal-600 transition-colors">
+                無料でアプリを試す
+              </Link>
+            </div>
+          </div>
+          {/* ▲▲▲ 追加ここまで ▲▲▲ */}
+          
         </article>
 
         {/* タグエリア */}

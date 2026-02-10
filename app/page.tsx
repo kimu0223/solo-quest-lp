@@ -4,12 +4,10 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden font-sans">
       
-      {/* --- 背景装飾：呼吸する光 --- */}
       <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-gradient-to-r from-teal-200/40 to-lime-200/40 rounded-full blur-[120px] -z-10 animate-pulse-slow mixture-blend-multiply" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-gradient-to-l from-sky-200/40 to-cyan-200/40 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
       <div className="absolute top-[40%] right-[20%] w-[400px] h-[400px] bg-purple-100/30 rounded-full blur-[100px] -z-10" />
 
-      {/* --- ヘッダー --- */}
       <header className="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-sm">
         <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3 group cursor-pointer">
@@ -28,7 +26,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* --- 1. ヒーローセクション --- */}
       <main className="pt-40 pb-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           
@@ -58,20 +55,24 @@ export default function Home() {
             親子の信頼と、自ら動く自信を育てます。
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-28 relative">
-            <button className="group relative w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-lg neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-28 relative z-30">
+            <Link
+              href="https://docs.google.com/forms/" 
+              target="_blank"
+              className="group relative w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-lg neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
+            >
               <span className="absolute inset-0 rounded-2xl bg-white/30 opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
               <span className="relative flex items-center justify-center gap-2 drop-shadow-sm">
-                冒険を始める
+                無料で冒険を始める
                 <svg className="w-6 h-6 text-lime-100 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
               </span>
-            </button>
-            <Link href="/blog" className="w-full sm:w-auto px-10 py-4 clay-card text-teal-800 font-bold text-lg hover:scale-105 hover:text-teal-600 transition-all text-center">
-              物語を見る
+            </Link>
+            
+            <Link href="/blog" className="w-full sm:w-auto px-10 py-4 clay-card text-teal-800 font-bold text-lg hover:scale-105 hover:text-teal-600 transition-all text-center flex items-center justify-center cursor-pointer relative z-30">
+              物語（ブログ）を読む
             </Link>
           </div>
 
-          {/* 3Dスマホエリア */}
           <div className="relative mx-auto w-full max-w-[380px] animate-float-delayed mb-12">
             <div className="bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3.5rem] p-3 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3),inset_0_2px_4px_rgba(255,255,255,0.3)] ring-4 ring-white/10 relative z-10 transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
               <div className="bg-gradient-to-b from-teal-50 to-white rounded-[2.8rem] overflow-hidden aspect-[9/19] relative flex flex-col">
@@ -124,7 +125,6 @@ export default function Home() {
         </div>
       </main>
 
-      {/* --- 2. 心のすれ違い（Perspective） --- */}
       <section className="py-24 relative bg-white/40 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -141,7 +141,6 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-            {/* 子供の視点 */}
             <div className="bg-white p-8 rounded-tr-[3rem] rounded-bl-[3rem] border border-blue-100 shadow-sm relative group">
               <div className="absolute -top-6 -left-4 text-6xl transform -rotate-12 group-hover:scale-110 transition-transform">👦</div>
               <h3 className="text-xl font-black text-blue-900 mb-4 text-right">ボクの気持ち</h3>
@@ -155,7 +154,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 親の視点 */}
             <div className="bg-white p-8 rounded-tl-[3rem] rounded-br-[3rem] border border-orange-100 shadow-sm relative group">
               <div className="absolute -top-6 -right-4 text-6xl transform rotate-12 group-hover:scale-110 transition-transform">👩</div>
               <h3 className="text-xl font-black text-orange-900 mb-4 text-left">親の気持ち</h3>
@@ -172,7 +170,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 3. 使い方セクション（How it works） --- */}
       <section className="py-24 relative z-10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -218,7 +215,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- ★新セクション4：機能紹介（Features / 6つの武器） --- */}
+      <section className="py-24 bg-white relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-teal-50/50 rounded-3xl p-8 md:p-12 border border-teal-100 flex flex-col md:flex-row gap-10 items-center">
+            <div className="w-32 h-32 md:w-48 md:h-48 shrink-0 bg-gray-200 rounded-full overflow-hidden border-4 border-white shadow-lg">
+              <div className="w-full h-full flex items-center justify-center bg-teal-100 text-6xl">🧑‍💻</div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                「早くしなさい」と言いたくない。<br/>
+                そんな悩みから生まれました。
+              </h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                はじめまして、Solo Quest開発者のKimuです。
+                私自身も、子供の「宿題やりたくない」「歯磨き面倒くさい」に毎日悩んでいました。
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                「もっと楽しく、ゲームのように自ら動いてくれたら…」
+                そんな願いを込めて、AIの力を借りて作ったのがこのアプリです。
+                あなたの家庭にも、小さな冒険と笑顔が増えますように。
+              </p>
+              <div className="mt-6 flex items-center gap-2">
+                 <span className="text-sm font-bold text-teal-600">Kimu</span>
+                 <span className="text-xs text-slate-400">/ Developer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-gradient-to-b from-white/0 to-teal-50/50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16">
@@ -231,7 +256,6 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            {/* 機能1: AIボイス */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-lime-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🤖</div>
               <div>
@@ -242,7 +266,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能2: 集中シールド (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start border-l-4 border-l-orange-400">
               <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🛡️</div>
               <div>
@@ -253,7 +276,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能3: ご褒美チケット (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🎁</div>
               <div>
@@ -264,7 +286,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能4: ウィジェット (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">📱</div>
               <div>
@@ -275,7 +296,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能5: 信頼貯金 */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🤝</div>
               <div>
@@ -286,7 +306,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能6: プライバシー */}
             <div className="clay-card p-8 flex gap-6 items-start bg-teal-50/50">
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-sm">🔒</div>
               <div>
@@ -301,7 +320,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- ★新セクション5：未来（Benefits） --- */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-lime-200/30 to-teal-200/30 rounded-full blur-[100px] -z-10" />
 
@@ -331,19 +349,22 @@ export default function Home() {
           </div>
 
           <div className="mt-16">
-            <button className="group relative w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-xl neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300">
+            <Link 
+              href="https://docs.google.com/forms/" 
+              target="_blank"
+              className="group relative w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-xl neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
+            >
               <span className="absolute inset-0 rounded-2xl bg-white/30 opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
               <span className="relative flex items-center justify-center gap-3 drop-shadow-sm">
                 今すぐ冒険を始める
                 <svg className="w-6 h-6 text-lime-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
               </span>
-            </button>
+            </Link>
             <p className="mt-4 text-xs text-slate-500 font-medium">※登録不要・完全無料で始められます</p>
           </div>
         </div>
       </section>
 
-      {/* --- フッター --- */}
       <footer className="bg-white/30 border-t border-teal-100/50 py-12 text-center backdrop-blur-md relative z-10">
         <p className="text-teal-800/70 text-sm font-bold">&copy; 2026 Solo Quest.</p>
       </footer>

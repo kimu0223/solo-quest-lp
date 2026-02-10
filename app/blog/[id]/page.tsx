@@ -1,24 +1,20 @@
+// ▼▼▼ 修正: ./posts ではなく ../posts に変更 ▼▼▼
 import { BLOG_POSTS } from '../posts';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-// 静的生成用の設定（これはそのままでOK）
 export function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
     id: post.id.toString(),
   }));
 }
 
-// ★ここを修正：型定義を Promise にし、関数を async に変更
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
   
-  // ★ここを修正：params を await して中身を取り出す
   const { id } = await params;
 
-  // 取り出した id で記事を探す
   const post = BLOG_POSTS.find((p) => p.id.toString() === id);
 
-  // 記事がなければ404
   if (!post) {
     notFound();
   }
@@ -26,7 +22,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
   return (
     <div className="min-h-screen bg-[#f8fafc] font-sans text-slate-800">
       
-      {/* --- ヘッダー --- */}
       <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-teal-100">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
@@ -41,10 +36,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
         </div>
       </header>
 
-      {/* --- 記事本文 --- */}
       <main className="pt-32 pb-24 px-6 max-w-3xl mx-auto">
         
-        {/* アイキャッチエリア */}
         <div className="text-center mb-12">
           <div className="inline-block bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-bold mb-4 border border-teal-100">
             {post.category}
@@ -58,14 +51,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
           </div>
         </div>
 
-        {/* コンテンツエリア */}
         <article className="clay-card p-8 md:p-12 bg-white/80 shadow-sm">
           <div 
             className="prose prose-slate prose-lg max-w-none prose-headings:font-bold prose-headings:text-teal-800 prose-p:leading-relaxed prose-a:text-teal-600 hover:prose-a:text-teal-500"
             dangerouslySetInnerHTML={{ __html: post.content }} 
           />
           
-          {/* ▼▼▼ 追加: 記事下のCTAエリア ▼▼▼ */}
           <div className="mt-16 pt-10 border-t border-slate-200">
             <div className="bg-gradient-to-br from-teal-50 to-lime-50 rounded-2xl p-8 text-center border border-teal-100">
               <h3 className="text-xl font-bold text-slate-800 mb-2">この記事の内容を、アプリで実践しませんか？</h3>
@@ -77,11 +68,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
               </Link>
             </div>
           </div>
-          {/* ▲▲▲ 追加ここまで ▲▲▲ */}
           
         </article>
 
-        {/* タグエリア */}
         <div className="mt-12 flex flex-wrap gap-2 justify-center">
           {post.tags.map((tag) => (
             <span key={tag} className="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs text-slate-500 font-bold">
@@ -90,7 +79,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
           ))}
         </div>
 
-        {/* アクションエリア */}
         <div className="mt-16 text-center">
           <h3 className="font-bold text-slate-800 mb-6">この記事を読んだ人におすすめ</h3>
           <div className="flex justify-center">
@@ -102,7 +90,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
 
       </main>
 
-      {/* --- フッター --- */}
       <footer className="py-10 text-center text-slate-400 text-sm border-t border-slate-200">
         <p>&copy; 2026 Solo Quest.</p>
       </footer>

@@ -4,10 +4,12 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden font-sans">
       
+      {/* --- 背景装飾：呼吸する光 --- */}
       <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-gradient-to-r from-teal-200/40 to-lime-200/40 rounded-full blur-[120px] -z-10 animate-pulse-slow mixture-blend-multiply" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-gradient-to-l from-sky-200/40 to-cyan-200/40 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
       <div className="absolute top-[40%] right-[20%] w-[400px] h-[400px] bg-purple-100/30 rounded-full blur-[100px] -z-10" />
 
+      {/* --- ヘッダー --- */}
       <header className="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-sm">
         <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3 group cursor-pointer">
@@ -26,6 +28,7 @@ export default function Home() {
         </div>
       </header>
 
+      {/* --- 1. ヒーローセクション --- */}
       <main className="pt-40 pb-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           
@@ -56,8 +59,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-28 relative z-30">
+            {/* ▼▼▼ 修正箇所：buttonタグをLinkに変更 ▼▼▼ */}
             <Link
-              href="https://docs.google.com/forms/" 
+              // ★★★ 重要：ここをご自身のGoogleフォームのURLに変更してください ★★★
+              href="https://docs.google.com/forms/d/e/...../viewform" 
               target="_blank"
               className="group relative w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-lg neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
             >
@@ -73,6 +78,7 @@ export default function Home() {
             </Link>
           </div>
 
+          {/* 3Dスマホエリア */}
           <div className="relative mx-auto w-full max-w-[380px] animate-float-delayed mb-12">
             <div className="bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3.5rem] p-3 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3),inset_0_2px_4px_rgba(255,255,255,0.3)] ring-4 ring-white/10 relative z-10 transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
               <div className="bg-gradient-to-b from-teal-50 to-white rounded-[2.8rem] overflow-hidden aspect-[9/19] relative flex flex-col">
@@ -125,6 +131,7 @@ export default function Home() {
         </div>
       </main>
 
+      {/* --- 2. 心のすれ違い（Perspective） --- */}
       <section className="py-24 relative bg-white/40 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -141,6 +148,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+            {/* 子供の視点 */}
             <div className="bg-white p-8 rounded-tr-[3rem] rounded-bl-[3rem] border border-blue-100 shadow-sm relative group">
               <div className="absolute -top-6 -left-4 text-6xl transform -rotate-12 group-hover:scale-110 transition-transform">👦</div>
               <h3 className="text-xl font-black text-blue-900 mb-4 text-right">ボクの気持ち</h3>
@@ -154,6 +162,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 親の視点 */}
             <div className="bg-white p-8 rounded-tl-[3rem] rounded-br-[3rem] border border-orange-100 shadow-sm relative group">
               <div className="absolute -top-6 -right-4 text-6xl transform rotate-12 group-hover:scale-110 transition-transform">👩</div>
               <h3 className="text-xl font-black text-orange-900 mb-4 text-left">親の気持ち</h3>
@@ -170,6 +179,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- 3. 使い方セクション（How it works） --- */}
       <section className="py-24 relative z-10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -215,10 +225,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- 追加セクション：開発者ストーリー --- */}
       <section className="py-24 bg-white relative">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-teal-50/50 rounded-3xl p-8 md:p-12 border border-teal-100 flex flex-col md:flex-row gap-10 items-center">
             <div className="w-32 h-32 md:w-48 md:h-48 shrink-0 bg-gray-200 rounded-full overflow-hidden border-4 border-white shadow-lg">
+              {/* ご自身のアイコン画像があればここに設定、なければアバター等 */}
               <div className="w-full h-full flex items-center justify-center bg-teal-100 text-6xl">🧑‍💻</div>
             </div>
             <div className="flex-1">
@@ -244,6 +256,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- ★新セクション4：機能紹介（Features / 6つの武器） --- */}
       <section className="py-24 bg-gradient-to-b from-white/0 to-teal-50/50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16">
@@ -256,6 +269,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
+            {/* 機能1: AIボイス */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-lime-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🤖</div>
               <div>
@@ -266,6 +280,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 機能2: 集中シールド (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start border-l-4 border-l-orange-400">
               <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🛡️</div>
               <div>
@@ -276,6 +291,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 機能3: ご褒美チケット (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🎁</div>
               <div>
@@ -286,6 +302,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 機能4: ウィジェット (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">📱</div>
               <div>
@@ -296,6 +313,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 機能5: 信頼貯金 */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🤝</div>
               <div>
@@ -306,6 +324,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 機能6: プライバシー */}
             <div className="clay-card p-8 flex gap-6 items-start bg-teal-50/50">
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-sm">🔒</div>
               <div>
@@ -320,6 +339,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- ★新セクション5：未来（Benefits） --- */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-lime-200/30 to-teal-200/30 rounded-full blur-[100px] -z-10" />
 
@@ -349,8 +369,10 @@ export default function Home() {
           </div>
 
           <div className="mt-16">
+            {/* ▼▼▼ 修正箇所：ここもbuttonからLinkに変更 ▼▼▼ */}
             <Link 
-              href="https://docs.google.com/forms/" 
+              // ★★★ 重要：ここもGoogleフォームのURLに書き換えてください ★★★
+              href="https://docs.google.com/forms/d/e/...../viewform" 
               target="_blank"
               className="group relative w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-xl neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
             >
@@ -365,6 +387,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- フッター --- */}
       <footer className="bg-white/30 border-t border-teal-100/50 py-12 text-center backdrop-blur-md relative z-10">
         <p className="text-teal-800/70 text-sm font-bold">&copy; 2026 Solo Quest.</p>
       </footer>

@@ -30,7 +30,12 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-teal-600 transition-colors">
               お問い合わせ
             </Link>
+            <Link href="/site-map" className="hover:text-teal-600 transition-colors">
+              サイトマップ
+            </Link>
+
             <span className="w-full md:w-auto hidden md:block border-r border-slate-200 h-4"></span>
+            
             <Link href="/terms" className="hover:text-teal-600 transition-colors">
               利用規約
             </Link>

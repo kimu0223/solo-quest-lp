@@ -4,27 +4,34 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden font-sans">
       
-      {/* --- 背景装飾：呼吸する光 --- */}
+      {/* --- 背景装飾 --- */}
       <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-gradient-to-r from-teal-200/40 to-lime-200/40 rounded-full blur-[120px] -z-10 animate-pulse-slow mixture-blend-multiply" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-gradient-to-l from-sky-200/40 to-cyan-200/40 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
       <div className="absolute top-[40%] right-[20%] w-[400px] h-[400px] bg-purple-100/30 rounded-full blur-[100px] -z-10" />
 
-      {/* --- ヘッダー --- */}
-      <header className="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-sm">
-        <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="w-11 h-11 bg-gradient-to-br from-teal-400 to-emerald-500 rounded-2xl flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.4),0_4px_8px_rgba(20,184,166,0.3)] group-hover:scale-105 group-hover:rotate-3 transition-all">
-              <span className="text-2xl filter drop-shadow-sm">🌱</span>
-            </div>
-            <span className="text-xl font-black tracking-tight text-slate-800 group-hover:text-teal-600 transition-colors">
+      {/* --- ヘッダー（リンク修正済み） --- */}
+      <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-teal-100 shadow-sm">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 group cursor-pointer">
+            <span className="text-2xl filter drop-shadow-sm group-hover:scale-110 transition-transform">🌱</span>
+            <span className="font-black tracking-tight text-slate-800 text-lg group-hover:text-teal-600 transition-colors">
               Solo Quest
             </span>
-          </div>
-          <nav>
-             <Link href="/privacy" className="clay-card px-5 py-2.5 text-sm font-bold text-teal-700 hover:text-teal-900 hover:scale-105 transition-all">
-               保護者の方へ
-             </Link>
+          </Link>
+
+          {/* PC用メニュー */}
+          <nav className="hidden md:flex gap-8 text-sm font-bold text-slate-500">
+            <Link href="/blog" className="hover:text-teal-600 transition-colors py-2">ブログ</Link>
+            <Link href="/faq" className="hover:text-teal-600 transition-colors py-2">よくある質問</Link>
+            <Link href="/contact" className="hover:text-teal-600 transition-colors py-2">お問い合わせ</Link>
           </nav>
+
+          {/* 右上ボタン */}
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hidden sm:block text-xs font-bold text-teal-600 border border-teal-200 px-4 py-2 rounded-full hover:bg-teal-50 transition-colors">
+              保護者の方へ
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -59,9 +66,8 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-28 relative z-30">
-            {/* ▼▼▼ 修正箇所：buttonタグをLinkに変更 ▼▼▼ */}
             <Link
-              // ★★★ 重要：ここをご自身のGoogleフォームのURLに変更してください ★★★
+              // ★★★ 重要：ここをご自身のGoogleフォームURLに変更 ★★★
               href="https://docs.google.com/forms/d/e/...../viewform" 
               target="_blank"
               className="group relative w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-lg neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
@@ -225,12 +231,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 追加セクション：開発者ストーリー --- */}
+      {/* --- 開発者ストーリー --- */}
       <section className="py-24 bg-white relative">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-teal-50/50 rounded-3xl p-8 md:p-12 border border-teal-100 flex flex-col md:flex-row gap-10 items-center">
             <div className="w-32 h-32 md:w-48 md:h-48 shrink-0 bg-gray-200 rounded-full overflow-hidden border-4 border-white shadow-lg">
-              {/* ご自身のアイコン画像があればここに設定、なければアバター等 */}
+              {/* アイコン画像 */}
               <div className="w-full h-full flex items-center justify-center bg-teal-100 text-6xl">🧑‍💻</div>
             </div>
             <div className="flex-1">
@@ -256,7 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- ★新セクション4：機能紹介（Features / 6つの武器） --- */}
+      {/* --- 機能紹介（Features） --- */}
       <section className="py-24 bg-gradient-to-b from-white/0 to-teal-50/50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16">
@@ -268,8 +274,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            {/* 機能1: AIボイス */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-lime-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🤖</div>
               <div>
@@ -280,7 +284,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能2: 集中シールド (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start border-l-4 border-l-orange-400">
               <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🛡️</div>
               <div>
@@ -291,7 +294,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能3: ご褒美チケット (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🎁</div>
               <div>
@@ -302,7 +304,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能4: ウィジェット (New!) */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">📱</div>
               <div>
@@ -313,7 +314,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能5: 信頼貯金 */}
             <div className="clay-card p-8 flex gap-6 items-start">
               <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-inner">🤝</div>
               <div>
@@ -324,7 +324,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 機能6: プライバシー */}
             <div className="clay-card p-8 flex gap-6 items-start bg-teal-50/50">
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-sm">🔒</div>
               <div>
@@ -334,12 +333,54 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* --- ★新セクション5：未来（Benefits） --- */}
+      {/* --- ★★★ 追加セクション：トップページ用FAQ ★★★ --- */}
+      <section className="py-24 bg-slate-50 relative">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-teal-600 font-bold tracking-widest text-sm uppercase mb-2 block">FAQ</span>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-800">よくある質問</h2>
+          </div>
+          
+          <div className="space-y-4">
+             {/* Q1 */}
+             <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+               <h3 className="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                 <span className="bg-teal-100 text-teal-600 text-xs px-2 py-1 rounded">Q</span>
+                 アプリは無料ですか？
+               </h3>
+               <p className="text-sm text-slate-600 ml-8">はい、基本的な機能はすべて無料でご利用いただけます。広告も表示されません。</p>
+             </div>
+             {/* Q2 */}
+             <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+               <h3 className="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                 <span className="bg-teal-100 text-teal-600 text-xs px-2 py-1 rounded">Q</span>
+                 音声データは保存されますか？
+               </h3>
+               <p className="text-sm text-slate-600 ml-8">いいえ、AI解析のために一時的に送信されますが、解析後は即座に破棄されます。保存や学習利用は行いません。</p>
+             </div>
+             {/* Q3 */}
+             <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+               <h3 className="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                 <span className="bg-teal-100 text-teal-600 text-xs px-2 py-1 rounded">Q</span>
+                 何歳から使えますか？
+               </h3>
+               <p className="text-sm text-slate-600 ml-8">主に4歳〜小学校低学年のお子様を対象としていますが、どの年齢の方でも楽しくご利用いただけます。</p>
+             </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link href="/faq" className="text-teal-600 font-bold text-sm hover:underline">
+              もっと詳しく見る →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* --- 未来（CTA） --- */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-lime-200/30 to-teal-200/30 rounded-full blur-[100px] -z-10" />
 
@@ -369,9 +410,7 @@ export default function Home() {
           </div>
 
           <div className="mt-16">
-            {/* ▼▼▼ 修正箇所：ここもbuttonからLinkに変更 ▼▼▼ */}
             <Link 
-              // ★★★ 重要：ここもGoogleフォームのURLに書き換えてください ★★★
               href="https://docs.google.com/forms/d/e/...../viewform" 
               target="_blank"
               className="group relative w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-xl neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
@@ -387,9 +426,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- フッター --- */}
-      <footer className="bg-white/30 border-t border-teal-100/50 py-12 text-center backdrop-blur-md relative z-10">
-        <p className="text-teal-800/70 text-sm font-bold">&copy; 2026 Solo Quest.</p>
+      {/* --- フッター（リンク修正済み） --- */}
+      <footer className="py-16 bg-[#f8fafc] border-t border-teal-100 text-slate-600 relative z-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            
+            <div className="text-center md:text-left">
+              <Link href="/" className="flex items-center justify-center md:justify-start gap-2 mb-2 group">
+                <span className="text-xl">🌱</span>
+                <span className="font-black text-slate-800 tracking-tight group-hover:text-teal-600 transition-colors">
+                  Solo Quest
+                </span>
+              </Link>
+              <p className="text-xs font-medium text-slate-400">
+                日常を冒険に変える、親子で楽しむ成長RPG
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-bold">
+              <Link href="/blog" className="hover:text-teal-600 transition-colors">ブログ</Link>
+              <Link href="/faq" className="hover:text-teal-600 transition-colors">よくある質問</Link>
+              <Link href="/contact" className="hover:text-teal-600 transition-colors">お問い合わせ</Link>
+              <span className="w-full md:w-auto hidden md:block border-r border-slate-200 h-4"></span>
+              <Link href="/terms" className="hover:text-teal-600 transition-colors">利用規約</Link>
+              <Link href="/privacy" className="hover:text-teal-600 transition-colors">プライバシーポリシー</Link>
+              <Link href="/legal" className="hover:text-teal-600 transition-colors">特商法表記</Link>
+            </div>
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-slate-200 text-center">
+            <p className="text-[10px] text-slate-400 font-medium">
+              &copy; 2026 Solo Quest Guild. All rights reserved.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );

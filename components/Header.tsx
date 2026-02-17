@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -6,13 +7,17 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* ロゴエリア */}
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl filter drop-shadow-sm group-hover:scale-110 transition-transform">🌱</span>
-          <span className="font-black tracking-tight text-slate-800 text-lg group-hover:text-teal-600 transition-colors">
-            Solo Quest
-          </span>
+          <Image 
+            src="/logo.png"
+            alt="Solo Quest Logo"
+            width={200}
+            height={40}
+            className="h-14 w-auto object-contain group-hover:opacity-80 transition-opacity"
+            priority
+          />
         </Link>
 
-        {/* ナビゲーションメニュー */}
+        {/* ナビゲーションメニュー（PCのみ表示） */}
         <nav className="hidden md:flex gap-8 text-sm font-bold text-slate-500">
           <Link href="/blog" className="hover:text-teal-600 transition-colors py-2">
             ブログ

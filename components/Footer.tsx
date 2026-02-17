@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,12 +10,18 @@ export default function Footer() {
           {/* 左側：ロゴとキャッチコピー */}
           <div className="text-center md:text-left">
             <Link href="/" className="flex items-center justify-center md:justify-start gap-2 mb-2 group">
-              <span className="text-xl">🌱</span>
-              <span className="font-black text-slate-800 tracking-tight group-hover:text-teal-600 transition-colors">
-                Solo Quest
-              </span>
+              <div className="relative h-8 w-32">
+                <Image 
+                  src="/logo.png"
+                  alt="Solo Quest Logo"
+                  fill
+                  sizes="(max-width: 768px) 120px, 160px"
+                  className="object-contain group-hover:opacity-80 transition-opacity"
+                  priority
+                />
+              </div>
             </Link>
-            <p className="text-xs font-medium text-slate-400">
+            <p className="text-xs font-medium text-slate-400 mt-2">
               日常を冒険に変える、親子で楽しむ成長RPG
             </p>
           </div>
@@ -30,10 +37,10 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-teal-600 transition-colors">
               お問い合わせ
             </Link>
-            <Link href="/site-map" className="hover:text-teal-600 transition-colors">
+            <Link href="/sitemap" className="hover:text-teal-600 transition-colors">
               サイトマップ
             </Link>
-
+            
             <span className="w-full md:w-auto hidden md:block border-r border-slate-200 h-4"></span>
             
             <Link href="/terms" className="hover:text-teal-600 transition-colors">

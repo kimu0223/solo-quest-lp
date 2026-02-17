@@ -10,37 +10,48 @@ export type BlogPost = {
   };
   
   export const BLOG_POSTS: BlogPost[] = [
-    // ▼▼▼ 今回の新規追加記事 (ID: 21, 20, 19) ▼▼▼
+    // --- 最新の記事 ---
     {
       id: 21,
       title: "待てない子供に「待つ力」をどう教える？ゲームの『ロード時間』理論が意外と効いた話",
-      excerpt: "行列でぐずる、レストランの料理が待てない…。現代っ子の「待てなさ」は脳のバグではありません。ゲームの「ロード画面」から学んだ、待ち時間をエンタメに変える技術。",
-      date: "2026.02.26",
+      excerpt: "行列でぐずる、レストランの料理が待てない…。現代っ子の「待てなさ」は性格の問題ではありません。ゲームの「ロード画面」から学んだ、待ち時間をエンタメに変える技術。",
+      date: "2026.02.16",
       category: "しつけ",
-      tags: ["忍耐力", "マシュマロテスト", "自制心"],
+      tags: ["忍耐力", "待つ練習", "自制心"],
       emoji: "⏳",
       content: `
-        <h2>なぜ、スマホ世代は待てないのか？</h2>
-        <p>YouTubeは飛ばせるし、Netflixは並ばずに見れます。<br>
-        現代の子供たちにとって「待つ」という行為は、システムの不具合（バグ）のようなストレスなのです。<br>
-        「静かに待ちくたびれる」というのは、高度なスキルが必要な苦行です。</p>
+        <h2>YouTubeは飛ばせるのに、信号は飛ばせない</h2>
+        <p>現代の子供たちにとって、「待つ」という行為は苦行です。動画はスキップでき、知りたいことは即座に検索できる環境で育っているからです。<br>
+        我が子も、レストランの料理が来るまでの10分が待てず、すぐに「まだ？」「帰りたい」と騒いでいました。私はそれを「わがまま」だと思って叱っていましたが、ある時ふと気づきました。</p>
+        
+        <p><strong>「この子にとって、待ち時間は『画面がフリーズしている状態』と同じなのかもしれない」</strong>と。</p>
   
-        <h2>ロード画面には「Tips（ヒント）」がある</h2>
-        <p>ゲームでは、読み込み時間（ロード中）に退屈させないよう、ヒントやミニゲームが表示されます。<br>
-        現実の待ち時間もこれと同じで、「ただ待つ」のではなく「待つこと自体をクエスト化」する必要があります。</p>
+        <h2>ゲームのロード画面には「遊び」がある</h2>
+        <p>ゲームでは、読み込み時間（ロード中）にプレイヤーが退屈しないよう、豆知識が表示されたり、ボタン連打でキャラが動いたりする工夫がされています。<br>
+        つまり、<strong>「空白の時間」に「小さなタスク」を与えればいい</strong>のではないか？と考えました。</p>
   
-        <h2>「3分待機クエスト」のすすめ</h2>
-        <p>Solo Questでは、「カップラーメンができるまで座って待つ」といった行動もクエストにできます。<br>
-        「今から3分間、『地蔵のポーズ』を維持せよ！動いたら失敗！」<br>
-        こう宣言するだけで、子供は必死に動きを止めます。<br>
-        我慢を強いるのではなく、「動かないというゲーム」に挑ませる。これが自制心を育てる近道です。</p>
+        <h2>「3分間、地蔵になりきれ」</h2>
+        <p>そこでSolo Questを使う際、待ち時間を「忍耐」ではなく「クエスト」として定義し直しました。<br>
+        具体的には<strong>「料理が来るまで『お地蔵さんのポーズ』を維持するクエスト」</strong>です。<br>
+        「動いたら失敗！敵に見つかるぞ…」と囁くと、子供は真剣な顔で固まりました。</p>
+        
+        <p>結果、ただ「静かにしなさい！」と怒っていた時よりも、遥かに高い集中力で「待つこと」を楽しめるようになりました。<br>
+        我慢させるのではなく、<strong>「待つというゲーム」</strong>を提供する。これが開発者として辿り着いた攻略法です。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/16" class="text-teal-600 hover:underline font-bold">▶︎ 失敗するとすぐ癇癪を起こす子への対策</a></li>
+            <li><a href="/blog/8" class="text-teal-600 hover:underline font-bold">▶︎ 朝の支度をタイムアタックにする方法</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 20,
       title: "「言われなくてもやる子」は幻？ルーチンワークを『ログインボーナス』に変える発想",
       excerpt: "「毎日同じことを言うのに疲れた…」。でも大人だって給料なしで毎日働けますか？子供の毎日のタスク（歯磨き・着替え）に、ソシャゲの「ログボ」機能を取り入れる実験。",
-      date: "2026.02.25",
+      date: "2026.02.15",
       category: "習慣化",
       tags: ["ルーティン", "ログインボーナス", "継続力"],
       emoji: "🎁",
@@ -50,21 +61,29 @@ export type BlogPost = {
         新鮮味のないルーチンワーク（単純作業）を自発的にやるには、強烈な動機が必要です。</p>
   
         <h2>ソシャゲが毎日起動される理由</h2>
-        <p>スマホゲームには「ログインボーナス」があります。<br>
-        ゲームを遊ばなくても、起動するだけでアイテムが貰える。<br>
+        <p>私はスマホゲームの仕組みに着目しました。<br>
+        ゲームには<strong>「ログインボーナス」</strong>があります。ゲームを遊ばなくても、起動するだけでアイテムが貰える。<br>
         この「出席するだけで肯定される」仕組みが、習慣化の最初の一歩を作ります。</p>
         
         <h2>朝起きたら、まず「ログボ」</h2>
         <p>我が家では、朝起きて顔を洗ったら、Solo Questを開いて「おはよう！」と言うだけで経験値が入る設定にしています。<br>
         何かを達成しなくても、生活リズムを崩さなかっただけで評価される。<br>
-        この「甘すぎる設定」が、結果的に「ついでに着替えもやるか」という次の行動（コンボ）を生み出すのです。</p>
+        この<strong>「甘すぎる設定」</strong>が、結果的に「ついでに着替えもやるか」という次の行動（コンボ）を生み出すのです。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/5" class="text-teal-600 hover:underline font-bold">▶︎ 三日坊主を防ぐ心理学テクニック</a></li>
+            <li><a href="/blog/15" class="text-teal-600 hover:underline font-bold">▶︎ 現実世界のUIが不親切だという話</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 19,
       title: "すぐ「無理！手伝って！」と投げる我が子。攻略本（親）を隠したら、自分で考え始めた",
       excerpt: "少し難しいとすぐ親を頼る、失敗を極端に恐れる。それは親が先回りして「正解ルート」を教えすぎているからかもしれません。",
-      date: "2026.02.24",
+      date: "2026.02.14",
       category: "自律性",
       tags: ["過干渉", "問題解決能力", "見守る勇気"],
       emoji: "🗺️",
@@ -82,18 +101,23 @@ export type BlogPost = {
         <p>「靴下どこ？」と聞かれても、「靴下を探すクエストだね。健闘を祈る！」とだけ返します。<br>
         最初は怒りますが、自分で探して見つけた時、アプリに向かって「あったよ！」と報告する声は誇らしげです。<br>
         不親切に見えるかもしれませんが、答えを教えないことが、最大の教育リソースなのです。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/9" class="text-teal-600 hover:underline font-bold">▶︎ 宿題を「クエスト」に変える魔法</a></li>
+            <li><a href="/blog/2" class="text-teal-600 hover:underline font-bold">▶︎ お手伝いをRPGにする方法</a></li>
+          </ul>
+        </div>
       `,
     },
-    // ▲▲▲ 今回の新規追加ここまで ▲▲▲
-  
-    // ▼▼▼ 以下、既存記事 (ID: 18〜1) ▼▼▼
     {
       id: 18,
       title: "「何回言ったらわかるの！」と言いたくない。注意散漫な子が『ゲーム』なら集中できる本当の理由",
       excerpt: "「さっき言ったことをもう忘れてる…」それはやる気がないからではありません。ゲーム開発の視点で見ると、現実世界には『ある仕組み』が足りないことに気づきました。",
-      date: "2026.02.23",
+      date: "2026.02.13",
       category: "集中力",
-      tags: ["ゲーミフィケーション", "集中力", "ゲーム脳", "子育てハック"],
+      tags: ["ゲーミフィケーション", "集中力", "ゲーム脳"],
       emoji: "🧩",
       content: `
         <h2>なぜ、宿題は3分で飽きるのか？</h2>
@@ -111,13 +135,21 @@ export type BlogPost = {
         靴を揃えた瞬間に、AIが「ピロリン♪ 見事な整列だ！」と反応する。<br>
         この「即レス」があるだけで、散漫だった意識が「完了」という快感にカチッとハマります。<br>
         子供の性格を変えるのではなく、環境（仕組み）をゲームに寄せてあげる。これが私の提案する解決策です。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/15" class="text-teal-600 hover:underline font-bold">▶︎ 現実世界のUIが不親切だという話</a></li>
+            <li><a href="/blog/5" class="text-teal-600 hover:underline font-bold">▶︎ 三日坊主を防ぐテクニック</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 17,
       title: "「お手伝いでお小遣い」はあり？なし？我が家がたどり着いた『経験値（ポイント）制』のメリット",
       excerpt: "「お金のために動く子になってしまう？」という懸念と、「労働の対価を教えたい」という親心。現金の代わりにアプリの経験値を使った、新しい報酬のカタチ。",
-      date: "2026.02.21",
+      date: "2026.02.12",
       category: "家庭のルール",
       tags: ["お小遣い", "報酬制度", "しつけ"],
       emoji: "💰",
@@ -136,15 +168,23 @@ export type BlogPost = {
         <p>お金は「結果」に対して支払われますが、経験値は「プロセス（努力）」に対して付与しやすい性質があります。<br>
         Solo Questなら「失敗したけど挑戦した」ことにも経験値を与えられます。<br>
         お金の教育の第一歩として、まずはデジタルの経験値を貯めることから始めてみませんか？</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/11" class="text-teal-600 hover:underline font-bold">▶︎ ゲーム時間を報酬にするチケット制</a></li>
+            <li><a href="/blog/2" class="text-teal-600 hover:underline font-bold">▶︎ ゲーム好きの子がお手伝いをする理由</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 16,
       title: "失敗するとすぐ癇癪（かんしゃく）を起こす…。完璧主義な子に効く『ゲームオーバー』の捉え方",
       excerpt: "負けるのが嫌でゲームを投げ出す、間違いを指摘されると泣く。そんな「失敗が怖い子」に必要なのは、失敗を「データ収集」と捉え直すリフレーミングでした。",
-      date: "2026.02.20",
+      date: "2026.02.10",
       category: "メンタルケア",
-      tags: ["レジリエンス", "完璧主義", "癇癪", "失敗"],
+      tags: ["レジリエンス", "完璧主義", "癇癪"],
       emoji: "🛡️",
       content: `
         <h2>「1回で成功しないとダメ」という思い込み</h2>
@@ -163,13 +203,21 @@ export type BlogPost = {
         するとAIは（文脈によりますが）「大変なクエストだ！でも拭き取ればクリアだぞ！」と励ましてくれます。<br>
         失敗を「深刻なミス」から「突発イベント」に変えてしまう。<br>
         この「ゲーム思考」が身につくと、子供の折れやすい心は少しずつしなやかになっていきます。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/21" class="text-teal-600 hover:underline font-bold">▶︎ 待てない子に効く「待機クエスト」</a></li>
+            <li><a href="/blog/6" class="text-teal-600 hover:underline font-bold">▶︎ 小さな成功体験を積み重ねる方法</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 15,
       title: "「うちの子、怠け者？」いいえ、現実世界のUI（見た目）が不親切なだけでした。",
       excerpt: "ゲームなら何時間も集中できる子が、なぜ片付けはできないのか？それは「性格」の問題ではなく、「フィードバックの仕組み」の違いにあると気づいた話。",
-      date: "2026.02.19",
+      date: "2026.02.09",
       category: "心理学",
       tags: ["行動経済学", "UI/UX", "やる気スイッチ"],
       emoji: "🔋",
@@ -187,13 +235,21 @@ export type BlogPost = {
         <p>Solo Questは、現実世界にゲームのようなUI（ユーザーインターフェース）を重ねるアプリです。<br>
         歯磨きをすれば経験値が増える。1週間続ければバッジが光る。<br>
         「進んでいる感覚」さえ可視化してあげれば、子供は驚くほどの「努力家」に変わります。性格のせいにする前に、仕組みを変えてみませんか？</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/18" class="text-teal-600 hover:underline font-bold">▶︎ 注意散漫な子がゲームなら集中できる理由</a></li>
+            <li><a href="/blog/20" class="text-teal-600 hover:underline font-bold">▶︎ ルーチンワークをログボにする実験</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 14,
       title: "兄弟喧嘩が「パーティプレイ」に変わる？競争させるのをやめたらチームワークが生まれた",
       excerpt: "「お兄ちゃんだから我慢して！」はもう言いたくない。兄弟をライバルではなく、強敵に挑む「仲間（パーティ）」にするための魔法の言葉かけ。",
-      date: "2026.02.18",
+      date: "2026.02.08",
       category: "兄弟育児",
       tags: ["兄弟喧嘩", "協力プレイ", "チームワーク"],
       emoji: "⚔️",
@@ -211,13 +267,21 @@ export type BlogPost = {
         <p>すると不思議なことに、「僕が青いブロックやるから、赤いの拾って！」と作戦会議が始まりました。<br>
         AIも「二人の連携攻撃！ダメージ2倍！」と盛り上げます。<br>
         兄弟喧嘩を減らすコツは、お互いを向かせるのではなく、<strong>二人で同じ方向（クエスト）を向かせること</strong>でした。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/3" class="text-teal-600 hover:underline font-bold">▶︎ 兄弟で楽しむ新しい習慣術</a></li>
+            <li><a href="/blog/7" class="text-teal-600 hover:underline font-bold">▶︎ 家族全員で楽しむ報酬制度</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 13,
       title: "寝る前の「イヤイヤ」が消滅。歯磨きを『宿屋の回復イベント』に設定してみた",
       excerpt: "遊び疲れて眠いのに、歯磨きもお風呂も拒否して泣き叫ぶ…。そんな毎晩の地獄を、穏やかな「回復タイム」に変えたRPG的発想の転換。",
-      date: "2026.02.17",
+      date: "2026.02.07",
       category: "生活習慣",
       tags: ["寝かしつけ", "歯磨き嫌い", "夜のルーティン"],
       emoji: "💤",
@@ -236,13 +300,21 @@ export type BlogPost = {
         「今日の冒険、お疲れ様。ゆっくり休んで、また明日新しい世界を見に行こう」<br>
         この儀式があることで、子供は安心してスイッチをオフにできるようです。<br>
         寝かしつけは「強制終了」ではなく「セーブポイント」なのです。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/21" class="text-teal-600 hover:underline font-bold">▶︎ 待てない子供のメカニズム</a></li>
+            <li><a href="/blog/12" class="text-teal-600 hover:underline font-bold">▶︎ 朝の支度を実況プレイで乗り切る</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 12,
       title: "「早くして！」で一日が始まる最悪の朝...私が笑顔を取り戻した『実況プレイスタイル』とは？",
       excerpt: "毎朝の「靴下は？」「ご飯食べた？」の怒号。自己嫌悪で始まる1日を変えたのは、支度を『タイムアタック競技』に変えるちょっとした工夫でした。",
-      date: "2026.02.16",
+      date: "2026.02.06",
       category: "育児の悩み",
       tags: ["朝の支度", "時間管理", "体験談"],
       emoji: "⚡",
@@ -264,13 +336,21 @@ export type BlogPost = {
         <p>でも、親も人間。毎朝ハイテンションで実況なんてできません。<br>
         だからSolo Questを作りました。アプリのAIは、どれだけ親が眠くても、子供が「着替えた！」と言えば「驚異的なスピードだ！昨日の記録を30秒も更新！」と熱く盛り上げてくれます。<br>
         「早くして」と言う代わりに、アプリを起動する。これだけで、朝の景色は変わります。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/8" class="text-teal-600 hover:underline font-bold">▶︎ 朝の支度をタイムアタックにするメリット</a></li>
+            <li><a href="/blog/4" class="text-teal-600 hover:underline font-bold">▶︎ 褒め方を変えれば子供は伸びる</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 11,
       title: "ゲーム禁止は逆効果？「YouTube見たい」を最強のやる気スイッチに変える方法",
       excerpt: "「宿題終わるまでゲーム禁止！」と言えば言うほど、子供は隠れてやりたがる。心理学×実体験に基づいた、お互いが納得する『報酬チケット制』の導入法。",
-      date: "2026.02.15",
+      date: "2026.02.05",
       category: "ルール作り",
       tags: ["ゲーム依存", "YouTube", "プレマックの原理"],
       emoji: "📺",
@@ -290,13 +370,21 @@ export type BlogPost = {
         こう決めた瞬間、子供にとって宿題は「やらされるもの」から「チケットを稼ぐためのクエスト」に変わりました。</p>
   
         <p>今では「今日はたくさん稼ぐぞ！」と、自分からドリルを開いています。ルールを変えるだけで、敵だったゲームが最強の味方になるのです。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/17" class="text-teal-600 hover:underline font-bold">▶︎ お手伝いでお小遣いをあげるべきか？</a></li>
+            <li><a href="/blog/2" class="text-teal-600 hover:underline font-bold">▶︎ ゲーム好きの子がお手伝いをする心理</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 10,
       title: "「また怒っちゃった...」寝顔に謝る毎日を卒業。AIに『褒め役』を頼んだら子供が劇変した話",
       excerpt: "本当はもっと褒めてあげたい。でも余裕がない。そんな罪悪感を抱える親御さんへ。AIを「第三の保護者」として迎え入れる選択肢について。",
-      date: "2026.02.14",
+      date: "2026.02.04",
       category: "メンタルケア",
       tags: ["自己肯定感", "親のストレス", "AI活用"],
       emoji: "🧸",
@@ -316,13 +404,21 @@ export type BlogPost = {
         <br>
         「褒める」というカロリーの高い行動をAIに外注したことで、私自身、子供の行動を冷静に見守れるようになりました。<br>
         AIは、子供のためだけでなく、親の心を救うためにあるのだと実感しています。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/7" class="text-teal-600 hover:underline font-bold">▶︎ 親よりAIの方が褒め上手な理由</a></li>
+            <li><a href="/blog/3" class="text-teal-600 hover:underline font-bold">▶︎ AIと一緒にできた！を増やす習慣術</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 9,
       title: "「宿題しなさい」が逆効果な理由とは？自ら机に向かう「ゲーミフィケーション」の魔法",
       excerpt: "宿題をさせるのに疲れていませんか？「外発的動機づけ」の限界と、ゲームの要素を取り入れて子供の内発的なやる気を引き出す方法を解説。",
-      date: "2026.02.13",
+      date: "2026.02.03",
       category: "学習支援",
       tags: ["ゲーミフィケーション", "宿題", "内発的動機づけ"],
       emoji: "🎮",
@@ -339,13 +435,21 @@ export type BlogPost = {
         <p>Solo Questは、このゲームの仕組みを日常に取り入れます。<br>
         「宿題」というタスクを「経験値を稼ぐクエスト」と再定義するだけで、子供にとってそれは「やらされる苦行」から「レベルアップのための手段」に変わります。<br>
         「勉強しなさい」と言う代わりに、「今日のクエスト進捗はどう？」と聞いてみてください。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/18" class="text-teal-600 hover:underline font-bold">▶︎ 注意散漫な子がゲームなら集中できる理由</a></li>
+            <li><a href="/blog/1" class="text-teal-600 hover:underline font-bold">▶︎ 宿題しなさい！と言わなくなる魔法の言葉</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 8,
       title: "朝のドタバタが消える？子供が「タイムアタック」で準備を完了させる驚きの方法",
       excerpt: "毎朝「早くして！」と叫ぶのはもう終わり。支度を「タイムアタック・クエスト」に変えるだけで、子供は驚くほどテキパキ動き出します。",
-      date: "2026.02.12",
+      date: "2026.02.02",
       category: "生活習慣",
       tags: ["時間管理", "生活習慣", "子育てハック"],
       emoji: "⏰",
@@ -361,13 +465,21 @@ export type BlogPost = {
         <h2>AIが実況してくれるSolo Quest</h2>
         <p>Solo Questを使えば、支度が終わった瞬間に「記録更新！昨日の自分に勝ったぞ！」とAIが熱く実況してくれます。<br>
         ただのルーチンワークが「昨日の自分との戦い」に変わることで、朝の景色は劇的に変わります。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/12" class="text-teal-600 hover:underline font-bold">▶︎ 実況プレイで朝の支度を乗り切る体験談</a></li>
+            <li><a href="/blog/21" class="text-teal-600 hover:underline font-bold">▶︎ 待てない子供に「待つ」を教える技術</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 7,
       title: "親よりAIの方が褒め上手？デジタル世代の自己肯定感を高める「第三者」の存在",
       excerpt: "親だとつい感情的になってしまう…。そんな時こそAIの出番です。常に肯定的でフェアな「第三者」としてのAIが、子供の心をどう育てるのか？",
-      date: "2026.02.10",
+      date: "2026.02.01",
       category: "AI教育",
       tags: ["AI活用", "自己肯定感", "メンタルケア"],
       emoji: "🤖",
@@ -385,13 +497,21 @@ export type BlogPost = {
         <p>AIに任せきりにするわけではありません。<br>
         AIが褒めているのを見て、親も「AIも褒めてたね」と乗っかる。これで「親とAI、二人に認められた」という強力な自信が生まれます。<br>
         AIを「家庭内の第三のパートナー」として迎え入れてみませんか？</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/10" class="text-teal-600 hover:underline font-bold">▶︎ 親のストレスを減らすAI褒め役</a></li>
+            <li><a href="/blog/4" class="text-teal-600 hover:underline font-bold">▶︎ 伸びる褒め方、ダメな褒め方</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 6,
       title: "「どうせ無理」が口癖の子が変わる！小さな成功体験を「自律」に変える3つのステップ",
       excerpt: "子供が自信を持てない本当の理由は「能力不足」ではありません。「自分はできるんだ」という感覚（自己効力感）を、家庭で簡単に育てる科学的な方法を解説します。",
-      date: "2026.02.08",
+      date: "2026.01.30",
       category: "自己肯定感",
       tags: ["自己効力感", "成功体験", "メンタル"],
       emoji: "🌱",
@@ -419,13 +539,21 @@ export type BlogPost = {
         「キミが自分で決めて、キミが実行したから成功したんだよ」と、成功の原因を本人に帰属させましょう。</p>
         <p>アプリを使って「自分でクエストを選び、自分で報告する」というプロセスは、まさに<strong>「自分でやった！」という実感（自律）</strong>を強烈に育てます。<br>
         小さな「できた！」を拾い集める冒険を、今日から始めてみませんか？</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/20" class="text-teal-600 hover:underline font-bold">▶︎ 言われなくてもやる子を育てるログボ理論</a></li>
+            <li><a href="/blog/16" class="text-teal-600 hover:underline font-bold">▶︎ 失敗を恐れる完璧主義への対処法</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 5,
       title: "「三日坊主」は脳のせい？子供の「習慣化」が驚くほど続く3つの心理学テクニック",
       excerpt: "「また途中で投げ出した…」と嘆く前に。気合や根性に頼らず、脳の仕組みを利用して子供の「やり抜く力」を育てる教育メソッドを紹介します。",
-      date: "2026.02.07",
+      date: "2026.01.29",
       category: "習慣化メソッド",
       tags: ["教育", "習慣化", "脳科学", "ドーパミン"],
       emoji: "🧠",
@@ -456,13 +584,21 @@ export type BlogPost = {
         勉強やお手伝いにも、この仕組みを取り入れましょう。</p>
         <p>ただし、毎回同じご褒美だと脳は慣れてしまいます。<br>
         「今日は何がもらえるかな？」という<strong>ランダム性</strong>や、Solo Questのような<strong>「褒め言葉のバリエーション」</strong>が、子供の脳を刺激し続けます。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/20" class="text-teal-600 hover:underline font-bold">▶︎ ルーチンワークをログインボーナスにする</a></li>
+            <li><a href="/blog/18" class="text-teal-600 hover:underline font-bold">▶︎ 注意散漫な子でも集中できる仕組み</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 4,
       title: "「すごいね！」は逆効果？AIが教える「伸びる」褒め方",
       excerpt: "子供を褒めるとき、つい「すごい！」「えらい！」と言っていませんか？実は心理学的には、具体的なフィードバックこそがやる気の炎を燃やす薪になるんです。",
-      date: "2026.02.04",
+      date: "2026.01.28",
       category: "心理学",
       tags: ["自己効力感", "褒め方", "AI活用"],
       emoji: "🔥",
@@ -475,13 +611,21 @@ export type BlogPost = {
         <h2>AIは「具体的に」褒める天才</h2>
         <p>Solo QuestのAIは、「すごい！」だけでなく、「昨日より3分も早く準備できたね！」「毎日続けていて、まさに勇者だ！」と、具体的な事実に基づいて称賛します。<br>
         これが子供の自己効力感（自分ならできる！という感覚）を育てます。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/7" class="text-teal-600 hover:underline font-bold">▶︎ 親よりAIの方が褒め上手な理由</a></li>
+            <li><a href="/blog/10" class="text-teal-600 hover:underline font-bold">▶︎ 褒め役をAIに任せて親が楽になる話</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 3,
       title: "AIと一緒に「できた！」を増やす新しい習慣術",
       excerpt: "Solo QuestのAI判定機能は、ただの採点係ではありません。子供のやる気を引き出す「褒め上手」なパートナーです。",
-      date: "2026.01.25",
+      date: "2026.01.27",
       category: "機能紹介",
       tags: ["AI活用", "褒め方", "新機能"],
       emoji: "🤖",
@@ -502,13 +646,21 @@ export type BlogPost = {
         でも、AIが子供の「できた！」を受け止めてくれることで、親御さんには「心に余裕」が生まれます。</p>
         <p>余裕がある時に、AIの記録を見ながら「今日こんなに頑張ったんだね」と改めて褒めてあげる。<br>
         そんな<strong>「AIと親の連携プレー」</strong>が、新しい時代の子育て習慣です。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/10" class="text-teal-600 hover:underline font-bold">▶︎ 褒めるカロリーをAIに外注する</a></li>
+            <li><a href="/blog/18" class="text-teal-600 hover:underline font-bold">▶︎ 注意散漫な子とAIの相性</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 2,
       title: "ゲーム好きの子供が、自分からお手伝いをする理由",
       excerpt: "RPGのレベルアップが大好きな子ほど、実は「成長したい」という意欲が強いんです。",
-      date: "2026.01.28",
+      date: "2026.01.26",
       category: "ゲーミフィケーション",
       tags: ["ゲーム脳", "お手伝い", "自主性"],
       emoji: "🎮",
@@ -533,13 +685,21 @@ export type BlogPost = {
         </ul>
         <p>「やらされるお手伝い」が「自分のレベルを上げるためのクエスト」に変わった瞬間、子供の目の色は変わります。<br>
           ゲーム好きのお子さんこそ、このアプリの才能があるのです。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/9" class="text-teal-600 hover:underline font-bold">▶︎ 宿題を「クエスト」に変える方法</a></li>
+            <li><a href="/blog/17" class="text-teal-600 hover:underline font-bold">▶︎ お手伝い報酬を経験値にするメリット</a></li>
+          </ul>
+        </div>
       `,
     },
     {
       id: 1,
       title: "「宿題しなさい！」と言わなくなる魔法の言葉",
       excerpt: "毎日のガミガミ、疲れていませんか？「命令」を「クエスト」に変えるだけで、子供の目は輝き出します。",
-      date: "2026.02.01",
+      date: "2026.01.25",
       category: "子育てハック",
       tags: ["コミュニケーション", "宿題", "心理学"],
       emoji: "🪄",
@@ -562,6 +722,14 @@ export type BlogPost = {
         <p>「クエスト（冒険）」という言葉には、「自分で選んで挑戦する」というニュアンスが含まれています。<br>
         「着替えクエスト、スタート！」と宣言することで、子供はそれを親からの命令ではなく、<strong>自分がクリアすべきミッション</strong>として捉え直します。</p>
         <p>言葉一つで、子供の態度は魔法のように変わります。ぜひ今日から試してみてください。</p>
+  
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/9" class="text-teal-600 hover:underline font-bold">▶︎ 宿題をゲーミフィケーションで解決する</a></li>
+            <li><a href="/blog/19" class="text-teal-600 hover:underline font-bold">▶︎ すぐ親に頼る子への接し方</a></li>
+          </ul>
+        </div>
       `,
     },
   ];

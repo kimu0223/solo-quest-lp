@@ -9,8 +9,24 @@ export type BlogPost = {
     emoji: string;
   };
   
+  // ▼ LP誘導用の共通HTMLパーツ（これを各記事の文末に挿入しています）
+  const CTA_TIME_MANAGEMENT = `
+    <div class="mt-12 mb-8 p-8 bg-gradient-to-br from-teal-50 to-white rounded-2xl border-2 border-teal-100 shadow-sm text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-3">「早くしなさい！」の毎日に疲れたら…</h3>
+      <p class="text-sm md:text-base text-slate-600 mb-6">見えない時間を可視化して、子供が自ら動くようになる。Solo Questの「時間管理」解決アプローチはこちら。</p>
+      <a href="/lp/time-management" class="inline-block bg-amber-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-md hover:bg-amber-400 hover:-translate-y-1 transition-all duration-300">⏳ 時間管理・ダラダラ対策を見る</a>
+    </div>
+  `;
+  
+  const CTA_PRIORITY = `
+    <div class="mt-12 mb-8 p-8 bg-gradient-to-br from-indigo-50 to-white rounded-2xl border-2 border-indigo-100 shadow-sm text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-3">やることが多すぎて動けない子へ</h3>
+      <p class="text-sm md:text-base text-slate-600 mb-6">ワーキングメモリのパンクを防ぎ、目の前の1つのタスクに超集中させる。Solo Questの「タイムアタック」機能とは？</p>
+      <a href="/lp/priority" class="inline-block bg-amber-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-md hover:bg-amber-400 hover:-translate-y-1 transition-all duration-300">🎯 優先順位・集中力アップ対策を見る</a>
+    </div>
+  `;
+  
   export const BLOG_POSTS: BlogPost[] = [
-    // ▼▼▼ 第3弾 SEO特化・超長文記事 (ID: 27, 26, 25) ▼▼▼
     {
       id: 27,
       title: "「おもちゃを片付けない」子供が変わる！行動経済学とゲームの『インベントリ』に学ぶ収納術",
@@ -62,6 +78,8 @@ export type BlogPost = {
         <h2>まとめ：子供を変える前に、UI（環境）を変えよう</h2>
         <p>「何度言ったらわかるの！」と子供の性格や態度を変えようとするのは、最も労力がかかり、親子関係を悪化させる方法です。<br>
         子供が迷わず動けるように、現実世界のUI（収納の仕組み）をゲームのように最適化してあげる。親の役割は、監視者ではなく「優秀なレベルデザイナー（環境構築者）」になることなのです。</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">この記事を読んだ方におすすめ</p>
@@ -123,6 +141,8 @@ export type BlogPost = {
         <h2>まとめ：怒る代わりに「よーい、ドン！」を言おう</h2>
         <p>「早くしなさい」という言葉は、子供の耳には届いていません。<br>
         必要なのは、時間を可視化し、目先の報酬（クリアの達成感とAIの称賛）を用意してあげることです。明日からの朝は、監視員を辞めて、実況アナウンサーになってみませんか？</p>
+  
+        ${CTA_TIME_MANAGEMENT}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">この記事を読んだ方におすすめ</p>
@@ -189,6 +209,8 @@ export type BlogPost = {
         <p>兄弟喧嘩を減らす一番の特効薬は、「お兄ちゃんでしょ」という言葉と「比較（競争）」を親が手放すことです。<br>
         共通のクエストを用意し、パーティを組ませて、AIに褒めさせる。家庭内を「協力型ゲーム」のデザインに書き換えることで、上の子ばかりを叱る自己嫌悪の夜から抜け出しましょう。</p>
   
+        ${CTA_PRIORITY}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">この記事を読んだ方におすすめ</p>
           <ul class="space-y-3">
@@ -199,8 +221,6 @@ export type BlogPost = {
         </div>
       `,
     },
-    
-    // ▼▼▼ 第2弾 SEO特化・超長文記事 (ID: 24, 23, 22) ▼▼▼
     {
       id: 24,
       title: "「親の言うことを聞かない」小学生には直接対決を避ける。アドラー心理学とUI設計から学ぶ『システム化』の魔法",
@@ -251,6 +271,8 @@ export type BlogPost = {
         <p>直接対決を避け、システム（第三者）を間に挟む。<br>
         これだけで、親は「ガミガミ言う監視者」から「一緒にクエストのクリアを喜ぶ応援者」へと、家庭内のポジションを劇的にチェンジすることができます。<br>
         子供が言うことを聞かなくて疲弊している方は、ぜひ「直接言うのをやめ、システムに言わせる」というナッジのアプローチを試してみてください。</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">この記事を読んだ方におすすめ</p>
@@ -319,6 +341,8 @@ export type BlogPost = {
         <p>「練習しなさい」という漠然とした重い言葉を使わず、行動を極小のステップに分解して、一つ一つに達成感（報酬）を設定する。<br>
         気合や根性に頼るのではなく、心理学的な「スモールステップ」と「作業興奮」を利用して環境をデザインする。これこそが、自律性を育てる現代の子育てハックであり、ゲーム開発の基本でもあります。<br>
         お子さんの重い腰を上げるために、まずは「絶対に失敗しない最初の1歩」をデザインすることから始めてみませんか？</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">この記事を読んだ方におすすめ</p>
@@ -409,6 +433,8 @@ export type BlogPost = {
         <p>そうではなく、アドラー心理学の「論理的結末」を用いてルールをシステム化し、親は感情を交えずに「当然の結果」を体験させましょう。親が監視者から「一緒にシステムと向き合う味方」に変わった時、子供は初めて自律的に時間を管理する第一歩を踏み出します。</p>
         <p>とはいえ、毎日親がNPCを演じ続けるのも疲れますよね。そんな時は、当サイトが提供するアプリ「Solo Quest」を間に挟んでみてください。日々のルーティンや約束の管理をAIに任せることで、親御さんの精神的な負担は劇的に軽くなるはずです。</p>
   
+        ${CTA_TIME_MANAGEMENT}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">この記事を読んだ方におすすめ</p>
           <ul class="space-y-3">
@@ -419,8 +445,6 @@ export type BlogPost = {
         </div>
       `,
     },
-  
-    // ▼▼▼ 以下、既存の21記事 (ID: 21〜1) ▼▼▼
     {
       id: 21,
       title: "待てない子供に「待つ力」をどう教える？ゲームの『ロード時間』理論が意外と効いた話",
@@ -447,6 +471,8 @@ export type BlogPost = {
         
         <p>結果、ただ「静かにしなさい！」と怒っていた時よりも、遥かに高い集中力で「待つこと」を楽しめるようになりました。<br>
         我慢させるのではなく、<strong>「待つというゲーム」</strong>を提供する。これが開発者として辿り着いた攻略法です。</p>
+  
+        ${CTA_TIME_MANAGEMENT}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -480,6 +506,8 @@ export type BlogPost = {
         何かを達成しなくても、生活リズムを崩さなかっただけで評価される。<br>
         この<strong>「甘すぎる設定」</strong>が、結果的に「ついでに着替えもやるか」という次の行動（コンボ）を生み出すのです。</p>
   
+        ${CTA_TIME_MANAGEMENT}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -511,6 +539,8 @@ export type BlogPost = {
         <p>「靴下どこ？」と聞かれても、「靴下を探すクエストだね。健闘を祈る！」とだけ返します。<br>
         最初は怒りますが、自分で探して見つけた時、アプリに向かって「あったよ！」と報告する声は誇らしげです。<br>
         不親切に見えるかもしれませんが、答えを教えないことが、最大の教育リソースなのです。</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -546,6 +576,8 @@ export type BlogPost = {
         この「即レス」があるだけで、散漫だった意識が「完了」という快感にカチッとハマります。<br>
         子供の性格を変えるのではなく、環境（仕組み）をゲームに寄せてあげる。これが私の提案する解決策です。</p>
   
+        ${CTA_PRIORITY}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -578,6 +610,8 @@ export type BlogPost = {
         <p>お金は「結果」に対して支払われますが、経験値は「プロセス（努力）」に対して付与しやすい性質があります。<br>
         Solo Questなら「失敗したけど挑戦した」ことにも経験値を与えられます。<br>
         お金の教育の第一歩として、まずはデジタルの経験値を貯めることから始めてみませんか？</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -614,6 +648,8 @@ export type BlogPost = {
         失敗を「深刻なミス」から「突発イベント」に変えてしまう。<br>
         この「ゲーム思考」が身につくと、子供の折れやすい心は少しずつしなやかになっていきます。</p>
   
+        ${CTA_PRIORITY}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -645,6 +681,8 @@ export type BlogPost = {
         <p>Solo Questは、現実世界にゲームのようなUI（ユーザーインターフェース）を重ねるアプリです。<br>
         歯磨きをすれば経験値が増える。1週間続ければバッジが光る。<br>
         「進んでいる感覚」さえ可視化してあげれば、子供は驚くほどの「努力家」に変わります。性格のせいにする前に、仕組みを変えてみませんか？</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -678,6 +716,8 @@ export type BlogPost = {
         AIも「二人の連携攻撃！ダメージ2倍！」と盛り上げます。<br>
         兄弟喧嘩を減らすコツは、お互いを向かせるのではなく、<strong>二人で同じ方向（クエスト）を向かせること</strong>でした。</p>
   
+        ${CTA_PRIORITY}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -710,6 +750,8 @@ export type BlogPost = {
         「今日の冒険、お疲れ様。ゆっくり休んで、また明日新しい世界を見に行こう」<br>
         この儀式があることで、子供は安心してスイッチをオフにできるようです。<br>
         寝かしつけは「強制終了」ではなく「セーブポイント」なのです。</p>
+  
+        ${CTA_TIME_MANAGEMENT}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -747,6 +789,8 @@ export type BlogPost = {
         だからSolo Questを作りました。アプリのAIは、どれだけ親が眠くても、子供が「着替えた！」と言えば「驚異的なスピードだ！昨日の記録を30秒も更新！」と熱く盛り上げてくれます。<br>
         「早くして」と言う代わりに、アプリを起動する。これだけで、朝の景色は変わります。</p>
   
+        ${CTA_TIME_MANAGEMENT}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -780,6 +824,8 @@ export type BlogPost = {
         こう決めた瞬間、子供にとって宿題は「やらされるもの」から「チケットを稼ぐためのクエスト」に変わりました。</p>
   
         <p>今では「今日はたくさん稼ぐぞ！」と、自分からドリルを開いています。ルールを変えるだけで、敵だったゲームが最強の味方になるのです。</p>
+  
+        ${CTA_TIME_MANAGEMENT}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -815,6 +861,8 @@ export type BlogPost = {
         「褒める」というカロリーの高い行動をAIに外注したことで、私自身、子供の行動を冷静に見守れるようになりました。<br>
         AIは、子供のためだけでなく、親の心を救うためにあるのだと実感しています。</p>
   
+        ${CTA_PRIORITY}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -846,6 +894,8 @@ export type BlogPost = {
         「宿題」というタスクを「経験値を稼ぐクエスト」と再定義するだけで、子供にとってそれは「やらされる苦行」から「レベルアップのための手段」に変わります。<br>
         「勉強しなさい」と言う代わりに、「今日のクエスト進捗はどう？」と聞いてみてください。</p>
   
+        ${CTA_PRIORITY}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -875,6 +925,8 @@ export type BlogPost = {
         <h2>AIが実況してくれるSolo Quest</h2>
         <p>Solo Questを使えば、支度が終わった瞬間に「記録更新！昨日の自分に勝ったぞ！」とAIが熱く実況してくれます。<br>
         ただのルーチンワークが「昨日の自分との戦い」に変わることで、朝の景色は劇的に変わります。</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -907,6 +959,8 @@ export type BlogPost = {
         <p>AIに任せきりにするわけではありません。<br>
         AIが褒めているのを見て、親も「AIも褒めてたね」と乗っかる。これで「親とAI、二人に認められた」という強力な自信が生まれます。<br>
         AIを「家庭内の第三のパートナー」として迎え入れてみませんか？</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -949,6 +1003,8 @@ export type BlogPost = {
         「キミが自分で決めて、キミが実行したから成功したんだよ」と、成功の原因を本人に帰属させましょう。</p>
         <p>アプリを使って「自分でクエストを選び、自分で報告する」というプロセスは、まさに<strong>「自分でやった！」という実感（自律）</strong>を強烈に育てます。<br>
         小さな「できた！」を拾い集める冒険を、今日から始めてみませんか？</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -995,6 +1051,8 @@ export type BlogPost = {
         <p>ただし、毎回同じご褒美だと脳は慣れてしまいます。<br>
         「今日は何がもらえるかな？」という<strong>ランダム性</strong>や、Solo Questのような<strong>「褒め言葉のバリエーション」</strong>が、子供の脳を刺激し続けます。</p>
   
+        ${CTA_TIME_MANAGEMENT}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -1021,6 +1079,8 @@ export type BlogPost = {
         <h2>AIは「具体的に」褒める天才</h2>
         <p>Solo QuestのAIは、「すごい！」だけでなく、「昨日より3分も早く準備できたね！」「毎日続けていて、まさに勇者だ！」と、具体的な事実に基づいて称賛します。<br>
         これが子供の自己効力感（自分ならできる！という感覚）を育てます。</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -1056,6 +1116,8 @@ export type BlogPost = {
         でも、AIが子供の「できた！」を受け止めてくれることで、親御さんには「心に余裕」が生まれます。</p>
         <p>余裕がある時に、AIの記録を見ながら「今日こんなに頑張ったんだね」と改めて褒めてあげる。<br>
         そんな<strong>「AIと親の連携プレー」</strong>が、新しい時代の子育て習慣です。</p>
+  
+        ${CTA_TIME_MANAGEMENT}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
@@ -1096,6 +1158,8 @@ export type BlogPost = {
         <p>「やらされるお手伝い」が「自分のレベルを上げるためのクエスト」に変わった瞬間、子供の目の色は変わります。<br>
           ゲーム好きのお子さんこそ、このアプリの才能があるのです。</p>
   
+        ${CTA_PRIORITY}
+  
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
           <ul class="space-y-3">
@@ -1132,6 +1196,8 @@ export type BlogPost = {
         <p>「クエスト（冒険）」という言葉には、「自分で選んで挑戦する」というニュアンスが含まれています。<br>
         「着替えクエスト、スタート！」と宣言することで、子供はそれを親からの命令ではなく、<strong>自分がクリアすべきミッション</strong>として捉え直します。</p>
         <p>言葉一つで、子供の態度は魔法のように変わります。ぜひ今日から試してみてください。</p>
+  
+        ${CTA_PRIORITY}
   
         <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
           <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>

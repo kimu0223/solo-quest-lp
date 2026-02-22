@@ -19,6 +19,11 @@ export default function Header() {
 
         {/* ナビゲーションメニュー（PCのみ表示） */}
         <nav className="hidden md:flex gap-8 text-sm font-bold text-slate-500">
+          {/* ▼▼▼ ここに「子供の悩み別」を追加しました ▼▼▼ */}
+          <Link href="/lp" className="hover:text-teal-600 transition-colors py-2">
+            子供の悩み別
+          </Link>
+          {/* ▲▲▲ -------------------------------- ▲▲▲ */}
           <Link href="/blog" className="hover:text-teal-600 transition-colors py-2">
             ブログ
           </Link>

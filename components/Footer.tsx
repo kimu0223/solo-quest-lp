@@ -28,6 +28,11 @@ export default function Footer() {
 
           {/* 右側：リンク集 */}
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-bold">
+            {/* ▼▼▼ ここに「子供の悩み別」を追加しました ▼▼▼ */}
+            <Link href="/lp" className="hover:text-teal-600 transition-colors">
+              子供の悩み別
+            </Link>
+            {/* ▲▲▲ -------------------------------- ▲▲▲ */}
             <Link href="/blog" className="hover:text-teal-600 transition-colors">
               ブログ
             </Link>

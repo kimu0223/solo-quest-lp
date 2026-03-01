@@ -14,7 +14,7 @@ export default function LPHubPage() {
       <Header />
 
       <main className="flex-grow pt-24 pb-20">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           
           <div className="text-center mb-16">
             <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4">
@@ -25,7 +25,9 @@ export default function LPHubPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* ▼▼▼ md:grid-cols-3 に変更して3列に並べます ▼▼▼ */}
+          <div className="grid md:grid-cols-3 gap-8">
+            
             {/* 悩み1：時間管理 */}
             <Link href="/lp/time-management" className="block group">
               <div className="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-xl hover:border-teal-300 transition-all duration-300 h-full relative overflow-hidden">
@@ -35,12 +37,12 @@ export default function LPHubPage() {
                   <h2 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-teal-600 transition-colors">
                     「早くしなさい！」の無限ループ
                   </h2>
-                  <ul className="text-slate-600 space-y-2 mb-6">
+                  <ul className="text-slate-600 space-y-2 mb-6 text-sm">
                     <li>・朝の準備が絶望的に遅い</li>
                     <li>・ゲームの約束時間を守れない</li>
                     <li>・お風呂や歯磨きを後回しにする</li>
                   </ul>
-                  <span className="inline-flex items-center text-teal-600 font-bold">
+                  <span className="inline-flex items-center text-teal-600 font-bold text-sm">
                     解決策を見る 
                     <svg className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -50,21 +52,21 @@ export default function LPHubPage() {
               </div>
             </Link>
 
-            {/* 悩み2：優先順位・タスク管理 */}
+            {/* 悩み2：優先順位 */}
             <Link href="/lp/priority" className="block group">
               <div className="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-xl hover:border-indigo-300 transition-all duration-300 h-full relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
                 <div className="relative z-10">
                   <div className="text-5xl mb-6">🤯</div>
                   <h2 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-indigo-600 transition-colors">
-                    優先順位がつけられない・パニック
+                    優先順位がつけられない
                   </h2>
-                  <ul className="text-slate-600 space-y-2 mb-6">
-                    <li>・宿題よりYouTubeを優先してしまう</li>
-                    <li>・やることが多くてどこから手をつけるか迷う</li>
+                  <ul className="text-slate-600 space-y-2 mb-6 text-sm">
+                    <li>・宿題より遊びを優先してしまう</li>
+                    <li>・やることが多くてフリーズする</li>
                     <li>・親が1から10まで指示しないと動けない</li>
                   </ul>
-                  <span className="inline-flex items-center text-indigo-600 font-bold">
+                  <span className="inline-flex items-center text-indigo-600 font-bold text-sm">
                     解決策を見る 
                     <svg className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -73,6 +75,32 @@ export default function LPHubPage() {
                 </div>
               </div>
             </Link>
+
+            {/* ▼▼▼ NEW! 悩み3：タスク管理 ▼▼▼ */}
+            <Link href="/lp/task-management" className="block group">
+              <div className="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-300 h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+                <div className="relative z-10">
+                  <div className="text-5xl mb-6">📝</div>
+                  <h2 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-emerald-600 transition-colors">
+                    チェック表が続かない・タスク管理
+                  </h2>
+                  <ul className="text-slate-600 space-y-2 mb-6 text-sm">
+                    <li>・ホワイトボードを作っても三日坊主</li>
+                    <li>・親が「あれやった？」と聞くのに疲れた</li>
+                    <li>・「忘れてた」と言い訳される</li>
+                  </ul>
+                  <span className="inline-flex items-center text-emerald-600 font-bold text-sm">
+                    解決策を見る 
+                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
+            {/* ▲▲▲ NEW! 悩み3 ここまで ▲▲▲ */}
+
           </div>
 
           <div className="mt-16 text-center">

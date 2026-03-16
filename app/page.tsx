@@ -1,9 +1,45 @@
 import Link from 'next/link';
 import Header from '@/components/Header';
+import CTAButton from '@/components/CTAButton';
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "アプリは無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、基本的な機能はすべて無料でご利用いただけます。広告も表示されません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "音声データは保存されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、AI解析のために一時的に送信されますが、解析後は即座に破棄されます。保存や学習利用は行いません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "何歳から使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "主に4歳〜小学校低学年のお子様を対象としていますが、どの年齢の方でも楽しくご利用いただけます。"
+      }
+    }
+  ]
+};
 
 export default function Home() {
   return (
     <div className="relative overflow-hidden font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       
       {/* --- 背景装飾 --- */}
       <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-gradient-to-r from-teal-200/40 to-lime-200/40 rounded-full blur-[120px] -z-10 animate-pulse-slow mixture-blend-multiply" />
@@ -44,10 +80,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-28 relative z-30">
-            <Link
-              // ★★★ 重要：ここをご自身のGoogleフォームURLに変更 ★★★
-              href="https://docs.google.com/forms/d/e/...../viewform" 
-              target="_blank"
+            <CTAButton
+              href="https://docs.google.com/forms/d/e/...../viewform"
+              label="無料で冒険を始める"
+              eventLabel="hero_cta"
               className="group relative w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-lg neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
             >
               <span className="absolute inset-0 rounded-2xl bg-white/30 opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
@@ -55,7 +91,7 @@ export default function Home() {
                 無料で冒険を始める
                 <svg className="w-6 h-6 text-lime-100 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
               </span>
-            </Link>
+            </CTAButton>
             
             <Link href="/blog" className="w-full sm:w-auto px-10 py-4 clay-card text-teal-800 font-bold text-lg hover:scale-105 hover:text-teal-600 transition-all text-center flex items-center justify-center cursor-pointer relative z-30">
               物語（ブログ）を読む
@@ -388,9 +424,10 @@ export default function Home() {
           </div>
 
           <div className="mt-16">
-            <Link 
-              href="https://docs.google.com/forms/d/e/...../viewform" 
-              target="_blank"
+            <CTAButton
+              href="https://docs.google.com/forms/d/e/...../viewform"
+              label="今すぐ冒険を始める"
+              eventLabel="bottom_cta"
               className="group relative w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-xl neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
             >
               <span className="absolute inset-0 rounded-2xl bg-white/30 opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
@@ -398,7 +435,7 @@ export default function Home() {
                 今すぐ冒険を始める
                 <svg className="w-6 h-6 text-lime-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
               </span>
-            </Link>
+            </CTAButton>
             <p className="mt-4 text-xs text-slate-500 font-medium">※登録不要・完全無料で始められます</p>
           </div>
         </div>

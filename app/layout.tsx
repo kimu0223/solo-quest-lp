@@ -43,6 +43,22 @@ export default function RootLayout({
     <html lang="ja" className="scroll-smooth">
       <body className={`${inter.className} bg-white text-slate-900 min-h-screen flex flex-col antialiased`}>
         
+        {/* JSON-LD: Organization構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Solo Quest",
+              "url": "https://solo-quest.jp",
+              "logo": "https://solo-quest.jp/logo.png",
+              "description": "子供の自律性を育てるAI教育アプリ。声で報告するとAIがRPGの口調で称賛し、自ら動く習慣を育てます。",
+              "sameAs": []
+            })
+          }}
+        />
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-284MJPXY48"

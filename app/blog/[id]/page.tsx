@@ -136,6 +136,40 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
           ))}
         </div>
 
+        {(() => {
+          const related = BLOG_POSTS
+            .filter((p) => p.id !== post.id)
+            .map((p) => ({
+              post: p,
+              score:
+                (p.category === post.category ? 3 : 0) +
+                p.tags.filter((t) => post.tags.includes(t)).length,
+            }))
+            .filter(({ score }) => score > 0)
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 3)
+            .map(({ post: p }) => p);
+
+          if (related.length === 0) return null;
+
+          return (
+            <div className="mt-16">
+              <h3 className="font-bold text-slate-800 mb-5 text-center text-lg">関連記事</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {related.map((p) => (
+                  <Link key={p.id} href={`/blog/${p.id}`} className="group block">
+                    <div className="bg-white border border-slate-100 rounded-2xl p-5 hover:border-teal-300 hover:shadow-md transition-all h-full flex flex-col">
+                      <span className="text-2xl mb-3">{p.emoji}</span>
+                      <p className="text-sm font-bold text-slate-700 group-hover:text-teal-600 transition-colors leading-snug flex-grow">{p.title}</p>
+                      <p className="text-xs text-slate-400 mt-3">{p.date}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
+
         <div className="mt-16">
           <h3 className="font-bold text-slate-800 mb-6 text-center">お子様の「どんなこと」でお悩みですか？</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">

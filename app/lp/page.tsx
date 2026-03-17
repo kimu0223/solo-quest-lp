@@ -99,7 +99,77 @@ export default function LPHubPage() {
                 </div>
               </div>
             </Link>
-            {/* ▲▲▲ NEW! 悩み3 ここまで ▲▲▲ */}
+            {/* 悩み4：宿題しない */}
+            <Link href="/lp/homework" className="block group">
+              <div className="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-xl hover:border-amber-300 transition-all duration-300 h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+                <div className="relative z-10">
+                  <div className="text-5xl mb-6">📚</div>
+                  <h2 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-amber-600 transition-colors">
+                    宿題をしない・後回しにする
+                  </h2>
+                  <ul className="text-slate-600 space-y-2 mb-6 text-sm">
+                    <li>・帰宅してもまずゲーム・YouTube</li>
+                    <li>・隣でついてないとやらない</li>
+                    <li>・泣いて嫌がる・癇癪になる</li>
+                  </ul>
+                  <span className="inline-flex items-center text-amber-600 font-bold text-sm">
+                    解決策を見る
+                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            {/* 悩み5：ゲームやめられない */}
+            <Link href="/lp/gaming" className="block group">
+              <div className="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-xl hover:border-violet-300 transition-all duration-300 h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-violet-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+                <div className="relative z-10">
+                  <div className="text-5xl mb-6">🎮</div>
+                  <h2 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-violet-600 transition-colors">
+                    ゲームがやめられない・スマホ依存
+                  </h2>
+                  <ul className="text-slate-600 space-y-2 mb-6 text-sm">
+                    <li>・「あとちょっと！」が永遠に続く</li>
+                    <li>・取り上げると大爆発する</li>
+                    <li>・ゲーム以外が全部後回しになる</li>
+                  </ul>
+                  <span className="inline-flex items-center text-violet-600 font-bold text-sm">
+                    解決策を見る
+                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            {/* 悩み6：朝起きられない */}
+            <Link href="/lp/morning" className="block group">
+              <div className="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-xl hover:border-sky-300 transition-all duration-300 h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-sky-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+                <div className="relative z-10">
+                  <div className="text-5xl mb-6">🌅</div>
+                  <h2 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-sky-600 transition-colors">
+                    朝起きられない・支度が遅い
+                  </h2>
+                  <ul className="text-slate-600 space-y-2 mb-6 text-sm">
+                    <li>・何度呼んでも起きない</li>
+                    <li>・起きても支度がノロノロ</li>
+                    <li>・毎朝怒鳴って自己嫌悪になる</li>
+                  </ul>
+                  <span className="inline-flex items-center text-sky-600 font-bold text-sm">
+                    解決策を見る
+                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
 
           </div>
 

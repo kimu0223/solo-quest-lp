@@ -7,6 +7,15 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "子供の集中力が続かない悩みを解決 | Solo Quest",
   description: "「すぐ飽きる」「5分も座っていられない」「気が散って宿題が終わらない」。子供の集中力が続かない本当の理由と、ゲーミフィケーションで集中を習慣化する方法をSolo Questが解説します。",
+  alternates: {
+    canonical: "https://solo-quest.jp/lp/concentration",
+  },
+  openGraph: {
+    title: "子供の集中力が続かない悩みを解決 | Solo Quest",
+    description: "「また気が散ってる！」を繰り返す日々を終わらせたい方へ。Solo Questで集中を「仕組み」で引き出しましょう。",
+    url: "https://solo-quest.jp/lp/concentration",
+    type: "website",
+  },
 };
 
 export default function ConcentrationLP() {

@@ -7,6 +7,15 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "小学生の「タスク管理」をRPG化！親のガミガミをなくすAIアプリ | Solo Quest",
   description: "紙のチェックリストが続かない小学生へ。日常のタスクを「クエスト」に変え、AIの即時フィードバックと経験値で子供が自ら動くようになるタスク管理アプリ「Solo Quest」。",
+  alternates: {
+    canonical: "https://solo-quest.jp/lp/task-management",
+  },
+  openGraph: {
+    title: "小学生の「タスク管理」をRPG化！親のガミガミをなくすAIアプリ | Solo Quest",
+    description: "チェックリストが続かない小学生へ。Solo Questでタスクをクエスト化し、親のガミガミをゼロにしましょう。",
+    url: "https://solo-quest.jp/lp/task-management",
+    type: "website",
+  },
 };
 
 export default function TaskManagementLP() {

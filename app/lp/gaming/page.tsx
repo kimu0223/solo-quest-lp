@@ -7,6 +7,15 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "子供がゲームをやめられない・スマホ依存の対処法 | Solo Quest",
   description: "「ゲームやめなさい！」が1日に何回もある方へ。Solo Questはゲームの時間ルールを親子で設定し、子供が自分でやめる仕組みを作ります。没収・怒鳴りなしで解決。",
+  alternates: {
+    canonical: "https://solo-quest.jp/lp/gaming",
+  },
+  openGraph: {
+    title: "子供がゲームをやめられない・スマホ依存の対処法 | Solo Quest",
+    description: "「ゲームやめなさい！」を繰り返す毎日を終わらせたい方へ。Solo Questで子供が自分でやめる力を育てましょう。",
+    url: "https://solo-quest.jp/lp/gaming",
+    type: "website",
+  },
 };
 
 export default function GamingLP() {

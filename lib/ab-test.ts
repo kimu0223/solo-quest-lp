@@ -64,11 +64,10 @@ export function getCookieName(testId: string): string {
 /** クライアントサイドでバリアントをGA4に送信 */
 export function trackAbTestView(testId: string, variant: Variant): void {
   if (typeof window === 'undefined') return;
-  // @ts-expect-error gtag is loaded globally
-  if (typeof window.gtag !== 'function') return;
+  if (typeof (window as Window & { gtag?: unknown }).gtag !== 'function') return;
 
-  // @ts-expect-error
-  window.gtag('event', 'ab_test_view', {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any).gtag('event', 'ab_test_view', {
     ab_test_id: testId,
     ab_variant: variant,
     event_category: 'AB Test',
@@ -78,11 +77,10 @@ export function trackAbTestView(testId: string, variant: Variant): void {
 /** クライアントサイドでコンバージョンをGA4に送信 */
 export function trackAbTestConversion(testId: string, variant: Variant, label: string): void {
   if (typeof window === 'undefined') return;
-  // @ts-expect-error
-  if (typeof window.gtag !== 'function') return;
+  if (typeof (window as Window & { gtag?: unknown }).gtag !== 'function') return;
 
-  // @ts-expect-error
-  window.gtag('event', 'ab_test_conversion', {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any).gtag('event', 'ab_test_conversion', {
     ab_test_id: testId,
     ab_variant: variant,
     ab_conversion_label: label,
@@ -93,11 +91,10 @@ export function trackAbTestConversion(testId: string, variant: Variant, label: s
 /** クライアントサイドでCTAクリックをGA4に送信 */
 export function trackCtaClick(testId: string, variant: Variant, ctaText: string): void {
   if (typeof window === 'undefined') return;
-  // @ts-expect-error
-  if (typeof window.gtag !== 'function') return;
+  if (typeof (window as Window & { gtag?: unknown }).gtag !== 'function') return;
 
-  // @ts-expect-error
-  window.gtag('event', 'cta_click', {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any).gtag('event', 'cta_click', {
     ab_test_id: testId,
     ab_variant: variant,
     cta_text: ctaText,
@@ -108,11 +105,10 @@ export function trackCtaClick(testId: string, variant: Variant, ctaText: string)
 /** スクロール深度をGA4に送信 */
 export function trackScrollDepth(page: string, depth: number): void {
   if (typeof window === 'undefined') return;
-  // @ts-expect-error
-  if (typeof window.gtag !== 'function') return;
+  if (typeof (window as Window & { gtag?: unknown }).gtag !== 'function') return;
 
-  // @ts-expect-error
-  window.gtag('event', 'scroll_depth', {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any).gtag('event', 'scroll_depth', {
     page_path: page,
     scroll_depth_percent: depth,
     event_category: 'Engagement',

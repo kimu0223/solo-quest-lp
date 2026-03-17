@@ -7,6 +7,15 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "子供が朝起きられない・朝の支度が遅い対処法 | Solo Quest",
   description: "毎朝「起きなさい！」「早くして！」で始まる1日に疲れていませんか？Solo Questは朝のルーティンをゲームに変えて、子供が自ら起きて支度できる習慣を育てます。",
+  alternates: {
+    canonical: "https://solo-quest.jp/lp/morning",
+  },
+  openGraph: {
+    title: "子供が朝起きられない・朝の支度が遅い対処法 | Solo Quest",
+    description: "毎朝怒鳴って始まる1日を変えたい方へ。Solo Questで朝のルーティンをクエスト化し、子供が自ら動く朝を作りましょう。",
+    url: "https://solo-quest.jp/lp/morning",
+    type: "website",
+  },
 };
 
 export default function MorningLP() {

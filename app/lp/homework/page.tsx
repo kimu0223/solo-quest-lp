@@ -7,6 +7,15 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "宿題をしない子供への対処法 | Solo Quest",
   description: "「宿題やったの？」が毎日の口癖になっていませんか？Solo Questは宿題をRPGのクエストに変換し、子供が自ら机に向かう仕組みを作ります。怒らなくていい毎日へ。",
+  alternates: {
+    canonical: "https://solo-quest.jp/lp/homework",
+  },
+  openGraph: {
+    title: "宿題をしない子供への対処法 | Solo Quest",
+    description: "「宿題やったの？」が毎日の口癖になっていませんか？Solo Questで宿題をクエストに変え、子供が自ら机に向かう習慣を作りましょう。",
+    url: "https://solo-quest.jp/lp/homework",
+    type: "website",
+  },
 };
 
 export default function HomeworkLP() {

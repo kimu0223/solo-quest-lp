@@ -1,9 +1,19 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",        // FOIT（文字が消える現象）を防ぐ
+  preload: true,
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#14b8a6",  // teal-500 - ブラウザUIの色
+};
 
 // ★ここを強化修正しました
 export const metadata: Metadata = {

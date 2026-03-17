@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import CTAButton from '@/components/CTAButton';
 
@@ -348,6 +349,110 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* --- アプリ画面ギャラリー --- */}
+      <section className="py-24 bg-gradient-to-b from-teal-50/30 to-white overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-teal-600 font-bold tracking-widest text-sm uppercase mb-2 block">App Screens</span>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-800">
+              実際のアプリを、<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-lime-500">のぞいてみよう。</span>
+            </h2>
+          </div>
+
+          {/* 3枚スマホ並び */}
+          <div className="flex items-end justify-center gap-4 md:gap-8">
+
+            {/* 左：クエスト画面 */}
+            <div className="flex flex-col items-center gap-4 transform -rotate-6 translate-y-4 hover:rotate-0 hover:translate-y-0 transition-all duration-500 w-[30%] max-w-[180px]">
+              <div className="relative w-full bg-slate-800 rounded-[2rem] p-2 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.35)] ring-4 ring-white/10">
+                <div className="rounded-[1.5rem] overflow-hidden aspect-[9/19] relative bg-teal-50">
+                  <Image
+                    src="/screenshots/screen-quest.png"
+                    alt="クエスト選択画面"
+                    fill
+                    className="object-cover object-top"
+                    sizes="180px"
+                  />
+                </div>
+                {/* ノッチ */}
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1.5 bg-slate-700 rounded-full" />
+              </div>
+              <div className="text-center">
+                <p className="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full border border-teal-100">① クエストを選ぶ</p>
+              </div>
+            </div>
+
+            {/* 中央（メイン）：音声報告画面 */}
+            <div className="flex flex-col items-center gap-4 z-10 w-[38%] max-w-[220px]">
+              <div className="relative w-full bg-slate-800 rounded-[2.5rem] p-[10px] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.4),0_0_0_1px_rgba(255,255,255,0.15)] ring-4 ring-white/10">
+                <div className="rounded-[2rem] overflow-hidden aspect-[9/19] relative bg-teal-50">
+                  <Image
+                    src="/screenshots/screen-voice.png"
+                    alt="音声報告画面"
+                    fill
+                    className="object-cover object-top"
+                    sizes="220px"
+                  />
+                </div>
+                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-14 h-2 bg-slate-700 rounded-full" />
+                {/* 光沢エフェクト */}
+                <div className="absolute inset-[10px] rounded-[2rem] bg-gradient-to-b from-white/10 via-transparent to-transparent pointer-events-none" />
+              </div>
+              <div className="text-center">
+                <p className="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-100">② 声で報告する</p>
+              </div>
+            </div>
+
+            {/* 右：結果・経験値画面 */}
+            <div className="flex flex-col items-center gap-4 transform rotate-6 translate-y-4 hover:rotate-0 hover:translate-y-0 transition-all duration-500 w-[30%] max-w-[180px]">
+              <div className="relative w-full bg-slate-800 rounded-[2rem] p-2 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.35)] ring-4 ring-white/10">
+                <div className="rounded-[1.5rem] overflow-hidden aspect-[9/19] relative bg-teal-50">
+                  <Image
+                    src="/screenshots/screen-result.png"
+                    alt="結果・称賛画面"
+                    fill
+                    className="object-cover object-top"
+                    sizes="180px"
+                  />
+                </div>
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1.5 bg-slate-700 rounded-full" />
+              </div>
+              <div className="text-center">
+                <p className="text-xs font-bold text-lime-600 bg-lime-50 px-3 py-1 rounded-full border border-lime-100">③ AIが大喜び！</p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* 追加スクショ 横並び小さめ */}
+          <div className="flex justify-center gap-4 md:gap-6 mt-12">
+            {[
+              { src: '/screenshots/screen-home.png', label: 'ホーム' },
+              { src: '/screenshots/screen-xp.png', label: '経験値' },
+              { src: '/screenshots/screen-reward.png', label: 'ご褒美' },
+            ].map(({ src, label }) => (
+              <div key={src} className="flex flex-col items-center gap-2 w-[28%] max-w-[120px]">
+                <div className="relative w-full bg-slate-700 rounded-[1.5rem] p-1.5 shadow-lg ring-2 ring-white/10 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="rounded-[1.2rem] overflow-hidden aspect-[9/19] relative bg-teal-50">
+                    <Image
+                      src={src}
+                      alt={`${label}画面`}
+                      fill
+                      className="object-cover object-top"
+                      sizes="120px"
+                    />
+                  </div>
+                  <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-8 h-1 bg-slate-600 rounded-full" />
+                </div>
+                <span className="text-[10px] font-bold text-slate-500">{label}</span>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 

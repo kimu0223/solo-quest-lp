@@ -3,13 +3,41 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import CTAButton from "@/components/CTAButton";
 import { Metadata } from "next";
+import { cookies, headers } from 'next/headers';
+import AbTestTracker from '@/components/AbTestTracker';
+import AbTestCta from '@/components/AbTestCta';
+import { AB_TESTS, type Variant } from '@/lib/ab-test';
 
 export const metadata: Metadata = {
   title: "小学生の「優先順位」がつけられない悩みを解決 | Solo Quest",
   description: "宿題より遊びを優先してしまう、やることが多すぎてパニックになる小学生へ。Solo Questは「タイムアタック」と「クエスト化」で、目の前のタスクに集中させるiOS専用のAIサポートアプリです。",
+  alternates: {
+    canonical: "https://solo-quest.jp/lp/priority",
+  },
+  openGraph: {
+    title: "小学生の「優先順位」がつけられない悩みを解決 | Solo Quest",
+    description: "宿題より遊びを優先してしまう小学生へ。Solo QuestのAIとゲーム化で、子供が自ら優先順位をつけるようになります。",
+    url: "https://solo-quest.jp/lp/priority",
+    type: "website",
+  },
 };
 
-export default function PriorityLP() {
+export default async function PriorityLP() {
+  // A/Bテスト: バリアント取得（Middlewareがセットしたヘッダー or Cookie）
+  const headersList = await headers();
+  const cookieStore = await cookies();
+
+  const variantFromHeader = headersList.get('x-ab-variant') as Variant | null;
+  const variantFromCookie = cookieStore.get('ab_priority_cta')?.value as Variant | undefined;
+  const ctaVariant: Variant = variantFromHeader || variantFromCookie || 'a';
+
+  const heroVariantCookie = cookieStore.get('ab_priority_hero')?.value as Variant | undefined;
+  const heroVariant: Variant = heroVariantCookie || 'a';
+
+  // バリアント別コンテンツ
+  const heroText = AB_TESTS['priority-hero'].variants[heroVariant];
+  const ctaText = AB_TESTS['priority-cta'].variants[ctaVariant];
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
       <Header />
@@ -24,25 +52,24 @@ export default function PriorityLP() {
                 「何からやればいいの？」をなくすアプリ
               </span>
               <h1 className="text-3xl md:text-5xl font-extrabold text-slate-800 leading-tight mb-6">
-                小学生の「優先順位」の悩みを<br />
-                ゲームの力で解決しませんか？
+                {heroText}
               </h1>
               <p className="text-base md:text-lg text-slate-600 mb-10 leading-relaxed">
                 宿題、明日の準備、お風呂…。小学校に入って急激に増えたタスク。<br />
                 子供の脳が処理しきれない「やることリスト」を1つのクエストに絞り込み、タイムアタックで集中力を爆発させるタスク管理アプリです。
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-                <CTAButton
+                <AbTestCta
+                  testId="priority-cta"
+                  variant={ctaVariant}
                   href="https://apps.apple.com/"
-                  label="App Store で無料DL"
-                  eventLabel="priority_lp_hero"
                   className="w-full sm:w-auto bg-amber-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-amber-400 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3"
                 >
                   <svg viewBox="0 0 384 512" fill="currentColor" className="w-5 h-5">
                     <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
                   </svg>
-                  App Store で無料DL
-                </CTAButton>
+                  {ctaText}
+                </AbTestCta>
               </div>
             </div>
             
@@ -244,6 +271,9 @@ export default function PriorityLP() {
 
       </main>
       <Footer />
+
+      {/* A/Bテスト計測: ビュー + スクロール深度 */}
+      <AbTestTracker testId="priority-cta" variant={ctaVariant} pagePath="/lp/priority" />
     </div>
   );
 }

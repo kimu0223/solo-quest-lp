@@ -6,6 +6,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "子供の悩み別・解決ガイド | Solo Quest",
   description: "朝のダラダラ、ゲームのルール、優先順位がつけられない…。小学生の親御さんが抱える「あるある」な悩み別に、AIとゲーミフィケーションを使った解決策をご提案します。",
+  alternates: {
+    canonical: "https://solo-quest.jp/lp",
+  },
 };
 
 export default function LPHubPage() {

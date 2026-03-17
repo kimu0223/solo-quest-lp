@@ -7,11 +7,72 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "子供の時間管理・ダラダラ対策に！AI実況アプリ | Solo Quest",
   description: "「朝の準備が遅い」「ゲームをやめない」など、子供の時間管理にお悩みの方へ。Solo Questは時間を可視化し、性格に合わせたAIのサポートで子供を「自ら動く勇者」に変えるiOS専用アプリです。",
+  alternates: {
+    canonical: "https://solo-quest.jp/lp/time-management",
+  },
+  openGraph: {
+    title: "子供の時間管理・ダラダラ対策に！AI実況アプリ | Solo Quest",
+    description: "「朝の準備が遅い」「ゲームをやめない」など、子供の時間管理にお悩みの方へ。Solo Questで子供を自ら動く勇者に変えましょう。",
+    url: "https://solo-quest.jp/lp/time-management",
+    type: "website",
+  },
+};
+
+const softwareAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Solo Quest",
+  "operatingSystem": "iOS",
+  "applicationCategory": "EducationalApplication",
+  "description": "子供の時間管理をゲーム化。タイムアタック・クエストでダラダラ・後回しを解消するiOSアプリ。",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Solo Quest Guild",
+    "url": "https://solo-quest.jp"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Solo Questは本当に無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、時間管理やクエスト機能はすべて無料でご利用いただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "子供がスマホを持っていなくてもSolo Questは使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "親御さんのスマホでアプリを開き、一緒にタイマーをセットしたり報告したりする形でも十分な効果があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "子供が時間を守れないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "小学生の前頭葉はまだ未発達で、将来を見据えた自制が難しい状態です。また「時間が見えていない」ことも原因です。Solo Questはタイムアタック形式で時間を可視化し、この問題を解決します。"
+      }
+    }
+  ]
 };
 
 export default function TimeManagementLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header />
 
       <main className="flex-grow pt-16">

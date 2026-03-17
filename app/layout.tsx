@@ -42,18 +42,35 @@ export default function RootLayout({
     <html lang="ja" className="scroll-smooth">
       <body className="bg-white text-slate-900 min-h-screen flex flex-col antialiased">
         
-        {/* JSON-LD: Organization構造化データ */}
+        {/* JSON-LD: Organization + WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Solo Quest",
-              "url": "https://solo-quest.jp",
-              "logo": "https://solo-quest.jp/logo.png",
-              "description": "子供の自律性を育てるAI教育アプリ。声で報告するとAIがRPGの口調で称賛し、自ら動く習慣を育てます。",
-              "sameAs": []
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://solo-quest.jp/#organization",
+                  "name": "Solo Quest Guild",
+                  "url": "https://solo-quest.jp",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://solo-quest.jp/og-image.png",
+                    "width": 1200,
+                    "height": 630
+                  }
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://solo-quest.jp/#website",
+                  "url": "https://solo-quest.jp",
+                  "name": "Solo Quest",
+                  "description": "子供が声でがんばったことを報告すると、AIがRPGの口調で称賛。自律性を積み上げる新しい教育体験アプリ。",
+                  "inLanguage": "ja",
+                  "publisher": { "@id": "https://solo-quest.jp/#organization" }
+                }
+              ]
             })
           }}
         />

@@ -9,9 +9,32 @@ export const metadata: Metadata = {
   description: "「ゲームやめなさい！」が1日に何回もある方へ。Solo Questはゲームの時間ルールを親子で設定し、子供が自分でやめる仕組みを作ります。没収・怒鳴りなしで解決。",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "スマホゲームだけでなくSwitchなどの据え置きゲームにも使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questはゲーム機の種類を問わず、「時間ルールを決めて守る」という行動習慣のサポートをします。" }
+    },
+    {
+      "@type": "Question",
+      "name": "ルールを守れなかった時のペナルティはありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "アプリ内で経験値が減る「デバフ」が入ります。親が感情的に怒る必要がなく、「システムのルール」として子供が受け入れやすくなります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "子供がルールを変えようとしてきます。どうすればいいですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "ルールの変更は「週に1回、家族会議で話し合う」という仕組みをアプリでサポートしています。子供の意見を聞きながら、合理的なルールを一緒に更新していけます。" }
+    }
+  ]
+};
+
 export default function GamingLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

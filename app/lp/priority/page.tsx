@@ -9,9 +9,27 @@ export const metadata: Metadata = {
   description: "宿題より遊びを優先してしまう、やることが多すぎてパニックになる小学生へ。Solo Questは「タイムアタック」と「クエスト化」で、目の前のタスクに集中させるiOS専用のAIサポートアプリです。",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "本当に無料ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい、タスクをクエスト化する機能やタイムアタック機能はすべて無料でご利用いただけます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "子供がスマホを持っていないのですが…",
+      "acceptedAnswer": { "@type": "Answer", "text": "親御さんのスマホでアプリを開き、お子様と一緒にクエストを選ぶ形でも、自律性を育む効果は十分に得られます。" }
+    }
+  ]
+};
+
 export default function PriorityLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

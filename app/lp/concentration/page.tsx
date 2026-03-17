@@ -9,9 +9,27 @@ export const metadata: Metadata = {
   description: "「すぐ飽きる」「5分も座っていられない」「気が散って宿題が終わらない」。子供の集中力が続かない本当の理由と、ゲーミフィケーションで集中を習慣化する方法をSolo Questが解説します。",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "集中できる時間が本当に短い場合でも効果がありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questは最短3分のクエストから設定できます。「3分集中できた！」という小さな成功体験を積み重ねることで、少しずつ集中時間を伸ばしていくことができます。最初から長く集中させようとするのは逆効果です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "ADHD傾向の子供にも使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "Solo Questは医療機器ではありませんが、短時間の明確なゴール設定・即時フィードバック・視覚的な進捗表示という特性は、注意力の維持が難しい子供にとって取り組みやすい設計になっています。ただし、専門医の診断・指導のもとでご利用ください。" }
+    }
+  ]
+};
+
 export default function ConcentrationLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

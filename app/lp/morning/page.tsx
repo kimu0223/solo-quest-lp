@@ -9,9 +9,32 @@ export const metadata: Metadata = {
   description: "毎朝「起きなさい！」「早くして！」で始まる1日に疲れていませんか？Solo Questは朝のルーティンをゲームに変えて、子供が自ら起きて支度できる習慣を育てます。",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "低学年の子でも使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。最初は親御さんが一緒にクエストを設定し、操作を教えてあげてください。慣れてくれば、子供が自分でアプリを開いて確認するようになります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "朝の時間が毎日バラバラです。対応できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "曜日ごとに異なる朝クエストを設定できます。習い事がある日・ない日など、家庭のスケジュールに合わせて柔軟に設定してください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "効果が出るまでどのくらいかかりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "個人差はありますが、多くのご家庭で1〜2週間で変化を感じていただいています。最初の3日間は一緒に使い、ルーティンを一緒に作ることがポイントです。" }
+    }
+  ]
+};
+
 export default function MorningLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

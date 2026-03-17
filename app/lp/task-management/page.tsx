@@ -9,9 +9,27 @@ export const metadata: Metadata = {
   description: "紙のチェックリストが続かない小学生へ。日常のタスクを「クエスト」に変え、AIの即時フィードバックと経験値で子供が自ら動くようになるタスク管理アプリ「Solo Quest」。",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "本当に無料ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい、基本的なタスク管理とクエスト機能はすべて無料でご利用いただけます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "子供がスマホを持っていないのですが…",
+      "acceptedAnswer": { "@type": "Answer", "text": "親御さんのスマホや、ご家庭のタブレットに入れて一緒に操作していただく形でも十分な効果があります。" }
+    }
+  ]
+};
+
 export default function TaskManagementLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

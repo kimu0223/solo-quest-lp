@@ -1,10 +1,20 @@
 import Link from 'next/link';
 import { BLOG_POSTS } from './posts';
 
-export default function BlogPage() {
+const POSTS_PER_PAGE = 12;
+
+export default async function BlogPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+  const { page } = await searchParams;
+  const currentPage = Math.max(1, parseInt(page ?? '1', 10));
+  const totalPages = Math.ceil(BLOG_POSTS.length / POSTS_PER_PAGE);
+  const safePage = Math.min(currentPage, totalPages);
+
+  const start = (safePage - 1) * POSTS_PER_PAGE;
+  const posts = BLOG_POSTS.slice(start, start + POSTS_PER_PAGE);
+
   return (
     <div className="min-h-screen bg-[#f8fafc] font-sans text-slate-800">
-      
+
       <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-teal-100">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
@@ -51,16 +61,16 @@ export default function BlogPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {BLOG_POSTS.map((post) => (
+          {posts.map((post) => (
             <Link key={post.id} href={`/blog/${post.id}`} className="group block h-full">
               <article className="clay-card p-6 h-full flex flex-col hover:-translate-y-2 hover:shadow-lg transition-all duration-300 bg-white cursor-pointer relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-lime-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
-                
+
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-4xl filter drop-shadow-sm group-hover:scale-110 transition-transform">{post.emoji}</span>
                   <span className="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full border border-teal-100">{post.category}</span>
                 </div>
-                
+
                 <h2 className="text-lg font-bold text-slate-800 mb-3 leading-snug group-hover:text-teal-600 transition-colors">{post.title}</h2>
                 <p className="text-sm text-slate-500 leading-relaxed mb-6 line-clamp-3 flex-grow">{post.excerpt}</p>
 
@@ -78,6 +88,45 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
+
+        {/* ページネーション */}
+        {totalPages > 1 && (
+          <div className="mt-16 flex items-center justify-center gap-2">
+            {safePage > 1 && (
+              <Link
+                href={`/blog?page=${safePage - 1}`}
+                className="px-4 py-2 rounded-xl border border-slate-200 text-sm font-bold text-slate-600 hover:border-teal-400 hover:text-teal-600 transition-all"
+              >
+                ← 前へ
+              </Link>
+            )}
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+              <Link
+                key={p}
+                href={`/blog?page=${p}`}
+                className={`w-10 h-10 flex items-center justify-center rounded-xl text-sm font-bold transition-all ${
+                  p === safePage
+                    ? 'bg-teal-500 text-white shadow-md'
+                    : 'border border-slate-200 text-slate-600 hover:border-teal-400 hover:text-teal-600'
+                }`}
+              >
+                {p}
+              </Link>
+            ))}
+            {safePage < totalPages && (
+              <Link
+                href={`/blog?page=${safePage + 1}`}
+                className="px-4 py-2 rounded-xl border border-slate-200 text-sm font-bold text-slate-600 hover:border-teal-400 hover:text-teal-600 transition-all"
+              >
+                次へ →
+              </Link>
+            )}
+          </div>
+        )}
+
+        <p className="text-center text-xs text-slate-400 mt-4">
+          {BLOG_POSTS.length}件中 {start + 1}〜{Math.min(start + POSTS_PER_PAGE, BLOG_POSTS.length)}件を表示
+        </p>
       </main>
 
       <footer className="py-10 text-center text-slate-400 text-sm border-t border-slate-200">

@@ -9,9 +9,27 @@ export const metadata: Metadata = {
   description: "「朝の準備が遅い」「ゲームをやめない」など、子供の時間管理にお悩みの方へ。Solo Questは時間を可視化し、性格に合わせたAIのサポートで子供を「自ら動く勇者」に変えるiOS専用アプリです。",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "本当に無料ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい、時間管理やクエスト機能はすべて無料でご利用いただけます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "子供がスマホを持っていないのですが…",
+      "acceptedAnswer": { "@type": "Answer", "text": "親御さんのスマホでアプリを開き、一緒にタイマーをセットしたり報告したりする形でも十分な効果があります。" }
+    }
+  ]
+};
+
 export default function TimeManagementLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

@@ -9,9 +9,32 @@ export const metadata: Metadata = {
   description: "「宿題やったの？」が毎日の口癖になっていませんか？Solo Questは宿題をRPGのクエストに変換し、子供が自ら机に向かう仕組みを作ります。怒らなくていい毎日へ。",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "宿題の内容によって使い方は変わりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "どんな宿題でも「クエスト」として登録できます。漢字・計算・読書・自由研究など、タイプに合わせてAIが声かけを変えます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "ゲームとの連動はありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "宿題クリアで獲得した経験値を使って、アプリ内で好きなキャラクターや称号を解放できます。これが「宿題をする→ゲームに有利になる」という好循環を生みます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "低学年でも使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。ひらがなが読める年齢から使えるようにUIを設計しています。最初は親御さんが一緒に操作し、慣れてきたら子供だけで使えるようになります。" }
+    }
+  ]
+};
+
 export default function HomeworkLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

@@ -1,13 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import Script from "next/script";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/900.css";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",        // FOIT（文字が消える現象）を防ぐ
-  preload: true,
-});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -51,7 +47,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className="scroll-smooth">
-      <body className={`${inter.className} bg-white text-slate-900 min-h-screen flex flex-col antialiased`}>
+      <body className="bg-white text-slate-900 min-h-screen flex flex-col antialiased">
         
         {/* JSON-LD: Organization構造化データ */}
         <script

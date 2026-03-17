@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    turbopackUseSystemTlsCerts: true,
+  },
   // 静的アセットの長期キャッシュ + セキュリティヘッダー
   async headers() {
     return [

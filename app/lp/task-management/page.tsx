@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import CTAButton from "@/components/CTAButton";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "小学生の「タスク管理」をRPG化！親のガミガミをなくすAIアプリ | Solo Quest",
@@ -57,9 +58,14 @@ export default function TaskManagementLP() {
             
             {/* アプリ画面のモックアップ（視覚的説得力） */}
             <div className="md:w-1/2 flex justify-center">
-              <div className="w-64 h-[500px] bg-slate-800 rounded-[3rem] border-8 border-slate-800 shadow-2xl relative overflow-hidden flex items-center justify-center">
-                {/* 実際のアプリ画面画像に差し替える場所 */}
-                <span className="text-slate-500 font-bold">App Screen</span>
+              <div className="w-64 h-[500px] bg-slate-800 rounded-[3rem] border-8 border-slate-800 shadow-2xl relative overflow-hidden">
+                <Image
+                  src="/screenshots/screen-xp.png"
+                  alt="Solo Questアプリ画面"
+                  fill
+                  className="object-cover object-top"
+                  sizes="256px"
+                />
               </div>
             </div>
           </div>
@@ -138,7 +144,15 @@ export default function TaskManagementLP() {
             <div className="space-y-16">
               <div className="flex flex-col md:flex-row items-center gap-10">
                 <div className="w-full md:w-1/2">
-                  <div className="bg-emerald-50 w-full aspect-video rounded-3xl flex items-center justify-center border-4 border-emerald-100 shadow-inner text-5xl">⚔️</div>
+                  <div className="w-full aspect-video rounded-3xl relative overflow-hidden border-4 border-emerald-100 shadow-inner bg-slate-900">
+                  <Image
+                    src="/screenshots/screen-xp.png"
+                    alt="Solo Questアプリ画面"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
                 </div>
                 <div className="w-full md:w-1/2">
                   <h3 className="text-2xl font-bold text-slate-800 mb-4">1. タスクを「クエスト」に変換</h3>
@@ -149,7 +163,15 @@ export default function TaskManagementLP() {
               </div>
               <div className="flex flex-col md:flex-row-reverse items-center gap-10">
                 <div className="w-full md:w-1/2">
-                  <div className="bg-amber-50 w-full aspect-video rounded-3xl flex items-center justify-center border-4 border-amber-100 shadow-inner text-5xl">🎉</div>
+                  <div className="w-full aspect-video rounded-3xl relative overflow-hidden border-4 border-amber-100 shadow-inner bg-slate-900">
+                  <Image
+                    src="/screenshots/screen-result.png"
+                    alt="Solo Questアプリ画面"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
                 </div>
                 <div className="w-full md:w-1/2">
                   <h3 className="text-2xl font-bold text-slate-800 mb-4">2. AIによる「即時フィードバック」</h3>

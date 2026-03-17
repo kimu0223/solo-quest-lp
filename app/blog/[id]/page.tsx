@@ -136,12 +136,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <h3 className="font-bold text-slate-800 mb-6">この記事を読んだ人におすすめ</h3>
-          <div className="flex justify-center">
-            <Link href="/" className="group relative px-8 py-4 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black shadow-lg hover:scale-105 transition-all">
-               Solo Questを無料で試す
-            </Link>
+        <div className="mt-16">
+          <h3 className="font-bold text-slate-800 mb-6 text-center">お子様の「どんなこと」でお悩みですか？</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { href: '/lp/homework', emoji: '📚', label: '宿題をしない' },
+              { href: '/lp/gaming', emoji: '🎮', label: 'ゲームをやめられない' },
+              { href: '/lp/morning', emoji: '🌅', label: '朝起きられない' },
+              { href: '/lp/time-management', emoji: '⏰', label: '時間管理・ダラダラ' },
+              { href: '/lp/priority', emoji: '🤯', label: '優先順位がつけられない' },
+              { href: '/lp/task-management', emoji: '📝', label: 'タスク管理・三日坊主' },
+            ].map(({ href, emoji, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="flex items-center gap-2 p-3 bg-white border border-slate-200 rounded-xl text-sm font-bold text-slate-700 hover:border-teal-400 hover:text-teal-700 hover:shadow-sm transition-all"
+              >
+                <span>{emoji}</span>
+                <span>{label}</span>
+              </Link>
+            ))}
           </div>
         </div>
 

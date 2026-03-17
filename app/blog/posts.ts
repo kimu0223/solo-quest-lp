@@ -60,6 +60,356 @@ export type BlogPost = {
 
   export const BLOG_POSTS: BlogPost[] = [
     {
+      id: 37,
+      title: "「学校行きたくない」と言われた朝、親がまずやるべき3つのこと",
+      excerpt: "月曜日の朝、泣きながら「学校行きたくない」と言う子供。怒る？励ます？休ませる？多くの親が迷うこの瞬間に、専門家が勧める「最初の3ステップ」を解説します。",
+      date: "2026.03.17",
+      category: "登校しぶり",
+      tags: ["学校行きたくない", "登校しぶり", "不登校", "子供のメンタル", "親の対応"],
+      emoji: "🏫",
+      content: `
+        <h2>「学校行きたくない」は子供からのSOSサイン</h2>
+        <p>「また始まった…」と感じてしまう気持ち、よくわかります。<br>
+        でも、子供が「行きたくない」と口にできたのは、<strong>親を信頼しているから</strong>です。</p>
+        <p>まず大切なのは、この言葉を「わがまま」や「サボり」ではなく、
+        子供なりの精一杯のSOSとして受け取ることです。</p>
+
+        <h2>ステップ1：まず「気持ちを受け止める」（5分）</h2>
+        <p>「何があったの？」「大丈夫だよ」という言葉より先に、まずこう言ってみてください。</p>
+        <div class="bg-teal-50 p-4 rounded-lg my-4 border-l-4 border-teal-500">
+          <p class="font-bold text-teal-700">「そうか、行きたくないんだね。それはつらいね。」</p>
+        </div>
+        <p>理由を聞いたり解決策を提案したりする前に、<strong>気持ちに共感する</strong>だけでいい。
+        これだけで子供の緊張が少し解けます。</p>
+
+        <h2>ステップ2：「身体の状態」を確認する</h2>
+        <p>登校しぶりは、しばしば身体症状として現れます。</p>
+        <ul>
+          <li>お腹が痛い・頭が痛いと言う</li>
+          <li>朝、異様に眠そう・ぐったりしている</li>
+          <li>食欲がない</li>
+        </ul>
+        <p>これらは<strong>「仮病」ではなく本物の症状</strong>です。
+        慢性的なストレスが自律神経を乱し、実際に身体に影響が出ています。
+        体温を測り、本当に具合が悪そうなら休ませることを躊躇わないでください。</p>
+
+        <h2>ステップ3：「今日だけ」と「これから」を分けて考える</h2>
+        <p>「今日どうするか」と「この先どうするか」は、別の問題です。</p>
+        <p>今日は休ませても、それが「不登校への一歩」にはなりません。
+        むしろ、無理やり行かせて傷を深めるよりも、<strong>「安心できる場所がある」と感じさせること</strong>が、
+        長期的な登校継続につながります。</p>
+        <p>「今日は休んでいいよ。でも、何が嫌なのかを一緒に考えよう」という姿勢が大切です。</p>
+
+        <h2>「行き渋り」が続く場合のチェックリスト</h2>
+        <div class="bg-slate-50 p-6 rounded-xl my-6">
+          <p class="font-bold text-slate-700 mb-3">以下が続く場合は、専門家への相談も検討を：</p>
+          <ul class="space-y-2 text-slate-600">
+            <li>✅ 2週間以上、毎朝行き渋りがある</li>
+            <li>✅ 腹痛・頭痛が繰り返されている</li>
+            <li>✅ 友達の話を一切しなくなった</li>
+            <li>✅ 家でも元気がなく、ふさぎ込んでいる</li>
+          </ul>
+        </div>
+
+        <h2>Solo Questが「行くきっかけ」になる理由</h2>
+        <p>Solo Questでは、「学校に行った」というタスクも立派なクエストになります。<br>
+        「今日も学校に行けた！」という報告をAIが全力で称賛することで、
+        子供の中に<strong>「自分はできる」という小さな自信</strong>が積み重なっていきます。</p>
+        <p>特効薬はありませんが、毎日の小さな「できた」を積み上げることが、
+        学校に行く意欲の土台になります。</p>
+
+        ${`
+    <div class="mt-12 mb-8 p-8 bg-gradient-to-br from-teal-50 to-white rounded-2xl border-2 border-teal-100 shadow-sm text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-3">子供の「できた！」を毎日積み上げる</h3>
+      <p class="text-sm md:text-base text-slate-600 mb-6">小さな一歩を褒め続けることで、子供の自信と意欲が育ちます。Solo Questの無料体験はこちら。</p>
+      <a href="/" class="inline-block bg-teal-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-md hover:bg-teal-400 hover:-translate-y-1 transition-all duration-300">🌱 Solo Questを無料で試す</a>
+    </div>
+  `}
+
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/31" class="text-teal-600 hover:underline font-bold">▶︎ 子供のモチベーションを科学する3つの方法</a></li>
+            <li><a href="/blog/6" class="text-teal-600 hover:underline font-bold">▶︎ 「どうせ無理」が口癖の子を変えるステップ</a></li>
+          </ul>
+        </div>
+      `,
+    },
+    {
+      id: 36,
+      title: "子供がなかなか寝ない…夜更かしを終わらせる「就寝クエスト」の作り方",
+      excerpt: "「早く寝なさい！」の声かけが毎晩の恒例行事になっていませんか？睡眠不足は学力・体力・情緒に直接影響します。寝る前ルーティンをゲームに変える「就寝クエスト」の仕組みを紹介します。",
+      date: "2026.03.17",
+      category: "生活習慣",
+      tags: ["夜更かし", "寝ない子供", "就寝ルーティン", "睡眠不足", "生活リズム"],
+      emoji: "🌙",
+      content: `
+        <h2>「早く寝なさい」が効かない本当の理由</h2>
+        <p>子供が夜更かしするのは「意地悪をしたい」からではありません。<br>
+        脳の前頭前野（理性・自制心を司る部分）は25歳頃まで発達途上。
+        子供が<strong>「今すぐ楽しいこと」より「将来の利益（睡眠）」を選べない</strong>のは、脳の構造上当然のことです。</p>
+        <p>だから「早く寝なさい」という「理性への訴え」は効きにくいのです。</p>
+
+        <h2>睡眠不足が子供に与える影響</h2>
+        <div class="bg-red-50 p-6 rounded-xl my-6 border-l-4 border-red-300">
+          <p class="font-bold text-red-700 mb-2">睡眠不足が続くと…</p>
+          <ul class="space-y-1 text-slate-700">
+            <li>📉 集中力・記憶力の低下（学力への影響）</li>
+            <li>😤 感情コントロールが難しくなる（かんしゃくが増える）</li>
+            <li>🤒 免疫力の低下（風邪をひきやすくなる）</li>
+            <li>📏 成長ホルモンの分泌が減る（身長への影響）</li>
+          </ul>
+        </div>
+        <p>学齢期（6〜12歳）に必要な睡眠は<strong>9〜11時間</strong>とされています。
+        夜10時就寝・朝7時起床でも9時間。多くの子が不足しています。</p>
+
+        <h2>「就寝クエスト」の設計方法</h2>
+        <p>ポイントは、就寝前の一連の行動を「クエスト（冒険）」として設計すること。</p>
+        <div class="bg-teal-50 p-6 rounded-xl my-6">
+          <p class="font-bold text-teal-700 mb-3">🌙 就寝クエスト（例）</p>
+          <ol class="space-y-2 text-slate-700">
+            <li>⭐ 歯磨きをする → <strong>「口腔防衛クエスト」クリア！</strong></li>
+            <li>⭐ 明日の準備をする → <strong>「翌日準備クエスト」クリア！</strong></li>
+            <li>⭐ パジャマに着替える → <strong>「就寝モード起動！」</strong></li>
+            <li>⭐ 布団に入る → <strong>「冒険者、休息モードへ。明日の経験値を2倍にする！」</strong></li>
+          </ol>
+        </div>
+        <p>Solo Questに「今日の就寝クエスト、全部クリアしたよ！」と報告すると、
+        AIが全力で称賛。<strong>寝ること自体が「達成感」に変わります。</strong></p>
+
+        <h2>「スクリーン断ち」を自然にやる方法</h2>
+        <p>就寝1時間前のスマホ・ゲームは、ブルーライトよりも<strong>「脳の興奮状態」</strong>が問題です。
+        「禁止」と言うと反発されますが、「クエストをクリアしたら画面OFF」という流れにすると、
+        子供が自分でやめやすくなります。</p>
+
+        ${`
+    <div class="mt-12 mb-8 p-8 bg-gradient-to-br from-teal-50 to-white rounded-2xl border-2 border-teal-100 shadow-sm text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-3">夜のルーティンをクエストに変える</h3>
+      <p class="text-sm md:text-base text-slate-600 mb-6">歯磨き・着替え・就寝の流れをゲームにすれば、「早く寝なさい！」が不要になります。</p>
+      <a href="/" class="inline-block bg-teal-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-md hover:bg-teal-400 hover:-translate-y-1 transition-all duration-300">🌱 Solo Questを無料で試す</a>
+    </div>
+  `}
+
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/13" class="text-teal-600 hover:underline font-bold">▶︎ 歯磨き嫌いを「宿屋の回復イベント」に変えた話</a></li>
+            <li><a href="/blog/22" class="text-teal-600 hover:underline font-bold">▶︎ ゲーム時間の約束を守らせるには？</a></li>
+          </ul>
+        </div>
+      `,
+    },
+    {
+      id: 35,
+      title: "テスト勉強しない小学生が自ら机に向かう「クエスト型学習」入門",
+      excerpt: "「テスト前なのに全然勉強しない！」親御さんの悩みあるあるです。なぜ子供はテスト勉強を先延ばしにするのか？脳科学から解き明かし、ゲーム感覚で自然と机に向かわせる方法を紹介します。",
+      date: "2026.03.17",
+      category: "学習習慣",
+      tags: ["テスト勉強", "勉強しない", "成績アップ", "学習習慣", "小学生の勉強"],
+      emoji: "📝",
+      content: `
+        <h2>「テスト勉強しなさい」が逆効果な脳科学的理由</h2>
+        <p>テストは「未来の出来事」です。子供の脳は、<strong>未来の報酬より目の前の快楽を優先</strong>するように設計されています。
+        （これは「遅延割引」と呼ばれる現象で、大人でも同様です。）</p>
+        <p>だから「テストのために今頑張れ」という説得は、脳の設計と真っ向から戦うことになります。
+        それよりも、<strong>勉強そのものを「今すぐ楽しい」ものに変える</strong>方が効果的です。</p>
+
+        <h2>先延ばしの正体：「始める」ことへの抵抗</h2>
+        <p>多くの場合、子供は「勉強が嫌い」なのではなく、<strong>「始めること」が嫌い</strong>です。
+        一度始めてしまえば、「作業興奮」という心理効果で、案外続けられます。</p>
+        <p>したがって、最初のハードルをとにかく下げることが鍵。</p>
+        <div class="bg-teal-50 p-4 rounded-lg my-4 border-l-4 border-teal-500">
+          <p class="font-bold text-teal-700">❌ 「30分勉強しなさい」（ハードルが高い）</p>
+          <p class="font-bold text-teal-700 mt-2">⭕ 「まず1問だけやってみよう」（超低ハードル）</p>
+        </div>
+
+        <h2>クエスト型学習の3ステップ</h2>
+        <div class="bg-slate-50 p-6 rounded-xl my-6">
+          <p class="font-bold text-slate-700 mb-4">📚 テスト前の「勉強クエスト」設計例</p>
+          <div class="space-y-4">
+            <div class="bg-white p-4 rounded-lg border border-slate-200">
+              <p class="font-bold text-teal-600">STEP 1：クエストを細かく分解する</p>
+              <p class="text-sm text-slate-600 mt-1">「国語の勉強」ではなく「漢字テスト10問を3回書く」</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-slate-200">
+              <p class="font-bold text-teal-600">STEP 2：クリアしたら即フィードバック</p>
+              <p class="text-sm text-slate-600 mt-1">Solo Questに「漢字クエストクリア！」と報告 → AIが称賛</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-slate-200">
+              <p class="font-bold text-teal-600">STEP 3：達成感の「可視化」</p>
+              <p class="text-sm text-slate-600 mt-1">クリアしたクエストを記録して、積み上がりを見える化する</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>「わからない問題」への向き合い方</h2>
+        <p>「わからない」と感じた瞬間、子供の脳は防衛反応を起こしてゲームや漫画に逃げます。
+        これを防ぐには、<strong>「わからなくて当然。それが勉強」</strong>という価値観を親が示すことです。</p>
+        <p>「わかった！」ではなく<strong>「わからなかったけど調べた」</strong>という報告をSolo Questにさせると、
+        AIは「それこそが本物の冒険者だ！」と称賛。失敗=成長という捉え方が育ちます。</p>
+
+        ${CTA_HOMEWORK}
+
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/29" class="text-teal-600 hover:underline font-bold">▶︎ 「宿題しなさい」が逆効果！クエスト化の科学</a></li>
+            <li><a href="/blog/5" class="text-teal-600 hover:underline font-bold">▶︎ 三日坊主は脳のせい？習慣化のテクニック</a></li>
+          </ul>
+        </div>
+      `,
+    },
+    {
+      id: 34,
+      title: "「友達ができない」「友達と喧嘩した」子供のコミュニケーション力を育てる親の関わり方",
+      excerpt: "「うちの子、クラスで浮いてるんじゃないか…」そんな不安を抱える親御さんへ。友達関係は「教えて育てる」よりも「経験の中で育つ」もの。親にできる最良のサポートとは何かを解説します。",
+      date: "2026.03.17",
+      category: "コミュニケーション",
+      tags: ["友達ができない", "友達関係", "コミュニケーション力", "社会性", "子供の人間関係"],
+      emoji: "👫",
+      content: `
+        <h2>「友達がいない」を心配する前に確認したいこと</h2>
+        <p>子供に「今日誰と遊んだ？」「友達はいる？」と毎日聞いていませんか？
+        実はこれ、子供にプレッシャーを与えてしまうことがあります。</p>
+        <p>まず確認したいのは、お子さんが<strong>「自分は友達がいなくて困っている」と思っているか</strong>です。
+        内向的な子は、一人の時間が好きなだけで孤独を感じていないケースも多くあります。</p>
+
+        <h2>友達関係でよくある悩みのパターン</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="bg-amber-50 p-4 rounded-xl border border-amber-100">
+            <p class="font-bold text-amber-700">😟 タイプA：最初の一歩が踏み出せない</p>
+            <p class="text-sm text-slate-600 mt-2">話しかけたいけど緊張する。輪に入れない。</p>
+          </div>
+          <div class="bg-violet-50 p-4 rounded-xl border border-violet-100">
+            <p class="font-bold text-violet-700">😤 タイプB：喧嘩になりやすい</p>
+            <p class="text-sm text-slate-600 mt-2">自分の意見を押し通す。感情コントロールが難しい。</p>
+          </div>
+          <div class="bg-sky-50 p-4 rounded-xl border border-sky-100">
+            <p class="font-bold text-sky-700">😶 タイプC：合わせすぎてしんどい</p>
+            <p class="text-sm text-slate-600 mt-2">友達の言いなりになってしまう。断れない。</p>
+          </div>
+          <div class="bg-teal-50 p-4 rounded-xl border border-teal-100">
+            <p class="font-bold text-teal-700">😢 タイプD：仲間外れ・無視される</p>
+            <p class="text-sm text-slate-600 mt-2">特定の子からターゲットにされている可能性。</p>
+          </div>
+        </div>
+
+        <h2>親ができる「コミュニケーション力」の育て方</h2>
+        <h3>1. 家での会話を豊かにする</h3>
+        <p>友達との会話力は、家庭での会話から育ちます。
+        「今日どうだった？」ではなく<strong>「今日一番面白かったことは？」「どんな気持ちだった？」</strong>
+        と感情や体験を言語化させる問いかけが効果的です。</p>
+
+        <h3>2. ロールプレイで練習する</h3>
+        <p>「友達に話しかけるとき、なんて言えばいい？」を親子でロールプレイするのは、
+        恥ずかしいかもしれませんが非常に効果的です。
+        <strong>「ねえ、一緒に遊ばない？」という一言を言える練習</strong>が、現実の場面で役立ちます。</p>
+
+        <h3>3. 「うまくいかなかった経験」を否定しない</h3>
+        <p>「喧嘩した」「仲間に入れてもらえなかった」という話を聞いたとき、
+        すぐに「あなたが悪かった」「相手がおかしい」と判断しないでください。
+        まず<strong>「それはつらかったね。どんな気持ちだった？」</strong>と受け止める。
+        その上で、一緒に「どうすればよかったか」を考えましょう。</p>
+
+        <h2>Solo Questでコミュニケーション力を育てる</h2>
+        <p>Solo Questでは、「友達に話しかけられた！」「喧嘩を自分で仲直りした！」
+        という体験もクエストとして報告できます。<br>
+        <strong>小さな一歩をAIが称賛し続けることで、
+        「自分はコミュニケーションできる」という自己効力感が育ちます。</strong></p>
+
+        ${`
+    <div class="mt-12 mb-8 p-8 bg-gradient-to-br from-teal-50 to-white rounded-2xl border-2 border-teal-100 shadow-sm text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-3">子供の小さな勇気を、毎日称賛する</h3>
+      <p class="text-sm md:text-base text-slate-600 mb-6">「話しかけられた」「仲直りした」そんな日常の一歩をAIが全力で褒めます。</p>
+      <a href="/" class="inline-block bg-teal-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-md hover:bg-teal-400 hover:-translate-y-1 transition-all duration-300">🌱 Solo Questを無料で試す</a>
+    </div>
+  `}
+
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/32" class="text-teal-600 hover:underline font-bold">▶︎ 兄弟げんかを減らす5つの方法</a></li>
+            <li><a href="/blog/24" class="text-teal-600 hover:underline font-bold">▶︎ 親の言うことを聞かない子への接し方</a></li>
+          </ul>
+        </div>
+      `,
+    },
+    {
+      id: 33,
+      title: "子供の自己肯定感を下げる「NGな褒め方」と、代わりに使いたい言葉",
+      excerpt: "「頑張ったね！」「すごい！」と褒めているのに、なぜか自信がない子供…。実は褒め方にも「効果的なもの」と「逆効果なもの」があります。スタンフォード大の研究が明らかにした「伸びる褒め方」を解説します。",
+      date: "2026.03.17",
+      category: "子育てのコツ",
+      tags: ["自己肯定感", "褒め方", "成長マインドセット", "自己効力感", "親の言葉"],
+      emoji: "🌟",
+      content: `
+        <h2>「すごいね！」が子供の自己肯定感を下げる？</h2>
+        <p>スタンフォード大学のキャロル・ドゥエック教授の研究は、世界中の子育てに影響を与えました。</p>
+        <p>彼女の実験では、子供に難しいパズルをやらせた後、2つのグループに分けて褒め方を変えました。</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="bg-red-50 p-4 rounded-xl border border-red-100">
+            <p class="font-bold text-red-600">Aグループ：「才能を褒める」</p>
+            <p class="text-sm text-slate-600 mt-2">「すごい！頭いいね！」</p>
+          </div>
+          <div class="bg-teal-50 p-4 rounded-xl border border-teal-100">
+            <p class="font-bold text-teal-600">Bグループ：「努力を褒める」</p>
+            <p class="text-sm text-slate-600 mt-2">「よく頑張ったね！一生懸命考えたね！」</p>
+          </div>
+        </div>
+        <p>その後、難しい問題と簡単な問題を選ばせると、<strong>Aグループは簡単な問題を選び、
+        Bグループは難しい問題に挑戦しました。</strong><br>
+        才能を褒められた子は「失敗して才能がないと思われたくない」というプレッシャーから、
+        挑戦を避けるようになったのです。</p>
+
+        <h2>NG褒め言葉 vs OK褒め言葉</h2>
+        <div class="space-y-4 my-6">
+          <div class="bg-red-50 p-4 rounded-xl border border-red-100">
+            <p class="font-bold text-red-600 mb-2">❌ NGな褒め方（固定型マインドセットを育てる）</p>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>・「頭いいね！」「天才！」（才能への言及）</li>
+              <li>・「いつもできるじゃない！」（常に成功を期待させる）</li>
+              <li>・「やっぱりうちの子は違う」（比較・優劣）</li>
+            </ul>
+          </div>
+          <div class="bg-teal-50 p-4 rounded-xl border border-teal-100">
+            <p class="font-bold text-teal-600 mb-2">✅ OKな褒め方（成長型マインドセットを育てる）</p>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>・「よく諦めずに最後まで頑張ったね！」（努力のプロセスへの言及）</li>
+              <li>・「前より早くできるようになったね！」（過去の自分との比較）</li>
+              <li>・「難しかったけど挑戦したこと自体がすごい！」（挑戦を評価）</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>「できなかった」時こそ親の言葉が大切</h2>
+        <p>失敗したとき、「なんでできないの！」は絶対NGです。<br>
+        代わりに<strong>「どこがわからなかった？一緒に考えよう」「失敗は成長の証だよ」</strong>
+        という言葉をかけることで、失敗を恐れない子に育ちます。</p>
+
+        <h2>AIが「努力を褒める」を毎日続けてくれる</h2>
+        <p>Solo QuestのAIは、子供の報告に対して常に<strong>「努力・過程・挑戦」</strong>を称賛するように設計されています。<br>
+        「宿題全部できた！」だけでなく「今日は1問しかできなかったけど諦めなかった！」という報告にも、
+        AIは全力で「それこそ本物の冒険者だ！」と応えます。</p>
+        <p>毎日の小さな努力を認め続けることが、子供の自己肯定感を確実に育てます。</p>
+
+        ${`
+    <div class="mt-12 mb-8 p-8 bg-gradient-to-br from-teal-50 to-white rounded-2xl border-2 border-teal-100 shadow-sm text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-3">AIが毎日「努力」を全力で称賛</h3>
+      <p class="text-sm md:text-base text-slate-600 mb-6">結果ではなく過程を褒め続けることで、子供の自己肯定感が自然と育ちます。</p>
+      <a href="/" class="inline-block bg-teal-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-md hover:bg-teal-400 hover:-translate-y-1 transition-all duration-300">🌱 Solo Questを無料で試す</a>
+    </div>
+  `}
+
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/4" class="text-teal-600 hover:underline font-bold">▶︎ 「すごいね！」は逆効果？AIが教える伸びる褒め方</a></li>
+            <li><a href="/blog/31" class="text-teal-600 hover:underline font-bold">▶︎ 小学生のモチベーションを科学する3つの方法</a></li>
+          </ul>
+        </div>
+      `,
+    },
+    {
       id: 32,
       title: "兄弟げんかを減らす5つの方法｜きょうだい間の公平感と自律性の育て方",
       excerpt: "「また喧嘩してる！」と毎日仲裁に追われていませんか？兄弟喧嘩の根本原因は「公平感の欠如」と「自律性の未発達」にあります。親が介入しすぎず、それぞれの自律性を育てる5つの実践的方法を解説します。",

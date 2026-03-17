@@ -171,6 +171,30 @@ export default function LPHubPage() {
               </div>
             </Link>
 
+            {/* 悩み7：集中力が続かない */}
+            <Link href="/lp/concentration" className="block group">
+              <div className="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+                <div className="relative z-10">
+                  <div className="text-5xl mb-6">🎯</div>
+                  <h2 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-purple-600 transition-colors">
+                    集中力が続かない
+                  </h2>
+                  <ul className="text-slate-600 space-y-2 mb-6 text-sm">
+                    <li>・机に座ってもすぐ気が散る</li>
+                    <li>・5分おきに席を立ってしまう</li>
+                    <li>・少しの刺激で集中がリセットされる</li>
+                  </ul>
+                  <span className="inline-flex items-center text-purple-600 font-bold text-sm">
+                    解決策を見る
+                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
+
           </div>
 
           <div className="mt-16 text-center">

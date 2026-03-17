@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/lp/homework',         // 宿題しないLP
     '/lp/gaming',           // ゲームやめられないLP
     '/lp/morning',          // 朝起きられないLP
+    '/lp/concentration',    // 集中力が続かないLP
     '/blog',
     '/faq',
     '/contact',

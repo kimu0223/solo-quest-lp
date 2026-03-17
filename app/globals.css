@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   /* 背景：ネオンカラーが映える、限りなく白に近いミント */

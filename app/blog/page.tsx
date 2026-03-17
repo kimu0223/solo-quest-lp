@@ -26,6 +26,30 @@ export default function BlogPage() {
           <p className="text-slate-500 font-medium">子育てを「もっと楽しく」するヒントをお届けします</p>
         </div>
 
+        {/* 悩み別LP誘導バナー */}
+        <div className="mb-14 bg-gradient-to-r from-teal-50 to-lime-50 rounded-3xl p-6 border border-teal-100">
+          <p className="text-center text-sm font-bold text-teal-700 mb-4">お子様の悩みから直接解決策を探す</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { href: '/lp/homework', emoji: '📚', label: '宿題をしない' },
+              { href: '/lp/gaming', emoji: '🎮', label: 'ゲームをやめられない' },
+              { href: '/lp/morning', emoji: '🌅', label: '朝起きられない' },
+              { href: '/lp/time-management', emoji: '⏰', label: '時間管理・ダラダラ' },
+              { href: '/lp/priority', emoji: '🤯', label: '優先順位がつけられない' },
+              { href: '/lp/task-management', emoji: '📝', label: 'タスク管理・三日坊主' },
+            ].map(({ href, emoji, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="flex items-center gap-2 p-3 bg-white border border-teal-100 rounded-xl text-sm font-bold text-slate-700 hover:border-teal-400 hover:text-teal-700 hover:shadow-sm transition-all"
+              >
+                <span>{emoji}</span>
+                <span>{label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {BLOG_POSTS.map((post) => (
             <Link key={post.id} href={`/blog/${post.id}`} className="group block h-full">

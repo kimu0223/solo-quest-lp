@@ -2,6 +2,7 @@
 import { BLOG_POSTS } from '../posts';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -9,8 +10,29 @@ export function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const post = BLOG_POSTS.find((p) => p.id.toString() === id);
+
+  if (!post) {
+    return { title: '記事が見つかりません | Solo Quest' };
+  }
+
+  return {
+    title: `${post.title} | Solo Quest`,
+    description: post.excerpt,
+    openGraph: {
+      title: `${post.title} | Solo Quest`,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.date.replace(/\./g, '-'),
+      url: `https://solo-quest.jp/blog/${post.id}`,
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
-  
+
   const { id } = await params;
 
   const post = BLOG_POSTS.find((p) => p.id.toString() === id);
@@ -19,9 +41,44 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
     notFound();
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date.replace(/\./g, '-'),
+    "dateModified": post.date.replace(/\./g, '-'),
+    "author": {
+      "@type": "Organization",
+      "name": "Solo Quest",
+      "url": "https://solo-quest.jp"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Solo Quest",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://solo-quest.jp/logo.png"
+      }
+    },
+    "url": `https://solo-quest.jp/blog/${post.id}`,
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://solo-quest.jp" },
+        { "@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://solo-quest.jp/blog" },
+        { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://solo-quest.jp/blog/${post.id}` }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#f8fafc] font-sans text-slate-800">
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+
       <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-teal-100">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
@@ -79,12 +136,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <h3 className="font-bold text-slate-800 mb-6">この記事を読んだ人におすすめ</h3>
-          <div className="flex justify-center">
-            <Link href="/" className="group relative px-8 py-4 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black shadow-lg hover:scale-105 transition-all">
-               Solo Questを無料で試す
-            </Link>
+        <div className="mt-16">
+          <h3 className="font-bold text-slate-800 mb-6 text-center">お子様の「どんなこと」でお悩みですか？</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { href: '/lp/homework', emoji: '📚', label: '宿題をしない' },
+              { href: '/lp/gaming', emoji: '🎮', label: 'ゲームをやめられない' },
+              { href: '/lp/morning', emoji: '🌅', label: '朝起きられない' },
+              { href: '/lp/time-management', emoji: '⏰', label: '時間管理・ダラダラ' },
+              { href: '/lp/priority', emoji: '🤯', label: '優先順位がつけられない' },
+              { href: '/lp/task-management', emoji: '📝', label: 'タスク管理・三日坊主' },
+            ].map(({ href, emoji, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="flex items-center gap-2 p-3 bg-white border border-slate-200 rounded-xl text-sm font-bold text-slate-700 hover:border-teal-400 hover:text-teal-700 hover:shadow-sm transition-all"
+              >
+                <span>{emoji}</span>
+                <span>{label}</span>
+              </Link>
+            ))}
           </div>
         </div>
 

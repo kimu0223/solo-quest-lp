@@ -1,8 +1,57 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'よくある質問 | Solo Quest',
+  description: 'Solo Questに関するよくある質問をまとめました。料金、音声データの取り扱い、対象年齢など、保護者の方が気になる疑問にお答えします。',
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "アプリは無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、Solo Questはダウンロード無料でお使いいただけます。将来的にプレミアム機能（サブスクリプション等）を追加する可能性がありますが、基本的な機能は無料で提供し続ける予定です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "子供の音声データは保存されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、保存されません。音声データはAIによる解析のために一時的に送信されますが、解析完了後、即座にサーバーから破棄されます。また、AIの学習データとして利用されることもありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "何歳から使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "主に4歳〜小学校低学年のお子様を想定して設計されていますが、「日々の習慣を楽しくしたい」という目的であれば、どの年齢の方でもご利用いただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Android版はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "現在はiOS版（iPhone/iPad）のリリースに向けて準備中です。Android版の開発も検討しておりますので、最新情報は公式サイトやブログでお知らせいたします。"
+      }
+    }
+  ]
+};
 
 export default function FAQ() {
   return (
     <div className="min-h-screen bg-[#f8fafc] font-sans text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-teal-100">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">

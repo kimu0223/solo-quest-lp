@@ -9,7 +9,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/lp',                  // 悩み別一覧（追加）
     '/lp/time-management',  // 時間管理LP（追加）
-    '/lp/priority',         // 優先順位LP（追加）
+    '/lp/priority',         // 優先順位LP
+    '/lp/homework',         // 宿題しないLP
+    '/lp/gaming',           // ゲームやめられないLP
+    '/lp/morning',          // 朝起きられないLP
+    '/lp/concentration',    // 集中力が続かないLP
     '/blog',
     '/faq',
     '/contact',

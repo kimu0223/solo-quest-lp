@@ -1,7 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { BLOG_POSTS } from '../posts';
 
-export const runtime = 'edge';
 export const alt = 'Solo Quest ブログ';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';

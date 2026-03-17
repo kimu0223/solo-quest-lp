@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { BLOG_POSTS } from './posts';
 
+export const dynamic = 'force-dynamic';
+
 const POSTS_PER_PAGE = 12;
 
 export default async function BlogPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {

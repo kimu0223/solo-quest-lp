@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export async function POST(request: NextRequest) {
   let body: { name?: string; email?: string; subject?: string; message?: string };
@@ -26,6 +27,18 @@ export async function POST(request: NextRequest) {
       { error: "メールアドレスの形式が正しくありません。" },
       { status: 400 }
     );
+  }
+
+  // Supabaseに保存（失敗してもメール送信は続行）
+  try {
+    await supabaseAdmin.from("contact_submissions").insert({
+      name,
+      email,
+      type: subject ?? "その他",
+      message,
+    });
+  } catch (err) {
+    console.error("[Contact Form] Supabase insert error:", err);
   }
 
   const apiKey = process.env.RESEND_API_KEY;

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 
 export async function POST(request: NextRequest) {
   let body: { name?: string; email?: string; subject?: string; message?: string };
@@ -31,12 +31,15 @@ export async function POST(request: NextRequest) {
 
   // Supabaseに保存（失敗してもメール送信は続行）
   try {
-    await supabaseAdmin.from("contact_submissions").insert({
-      name,
-      email,
-      type: subject ?? "その他",
-      message,
-    });
+    const supabase = getSupabaseAdmin();
+    if (supabase) {
+      await supabase.from("contact_submissions").insert({
+        name,
+        email,
+        type: subject ?? "その他",
+        message,
+      });
+    }
   } catch (err) {
     console.error("[Contact Form] Supabase insert error:", err);
   }
@@ -48,7 +51,7 @@ export async function POST(request: NextRequest) {
     console.log("[Contact Form] RESEND_API_KEY is not set. Logging form data instead:");
     console.log({
       from: "onboarding@resend.dev",
-      to: "solo.quest.app@gmail.com",
+      to: "sota0223kimura@gmail.com",
       subject: `[Solo Quest お問い合わせ] ${subject ?? "その他"}`,
       name,
       email,
@@ -63,7 +66,7 @@ export async function POST(request: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "solo.quest.app@gmail.com",
+      to: "sota0223kimura@gmail.com",
       subject: `[Solo Quest お問い合わせ] ${subject ?? "その他"}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">

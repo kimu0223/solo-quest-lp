@@ -10,14 +10,14 @@ import { AB_TESTS, type Variant } from '@/lib/ab-test';
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "子供の時間管理・ダラダラ対策に！AI実況アプリ | Solo Quest",
-  description: "「朝の準備が遅い」「ゲームをやめない」など、子供の時間管理にお悩みの方へ。Solo Questは時間を可視化し、性格に合わせたAIのサポートで子供を「自ら動く勇者」に変えるiOS専用アプリです。",
+  title: "時間管理できない子供を変える！ダラダラ・後回し対策アプリ | Solo Quest",
+  description: "「朝の準備が遅い」「ゲームをやめない」小学生の時間管理にお悩みの方へ。Solo Questは時間を可視化し、AIが子供を自ら動く勇者に変えます。無料で試せます。",
   alternates: {
     canonical: "https://solo-quest.jp/lp/time-management",
   },
   openGraph: {
-    title: "子供の時間管理・ダラダラ対策に！AI実況アプリ | Solo Quest",
-    description: "「朝の準備が遅い」「ゲームをやめない」など、子供の時間管理にお悩みの方へ。Solo Questで子供を自ら動く勇者に変えましょう。",
+    title: "時間管理できない子供を変える！ダラダラ・後回し対策アプリ | Solo Quest",
+    description: "「朝の準備が遅い」「ゲームをやめない」小学生の時間管理にお悩みの方へ。Solo Questで子供を自ら動く勇者に変えましょう。無料で試せます。",
     url: "https://solo-quest.jp/lp/time-management",
     type: "website",
   },

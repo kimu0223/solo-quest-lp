@@ -97,7 +97,8 @@ export function trackCtaClick(testId: string, variant: Variant, ctaText: string)
   (window as any).gtag('event', 'cta_click', {
     ab_test_id: testId,
     ab_variant: variant,
-    cta_text: ctaText,
+    cta_label: ctaText,
+    page_location: window.location.href,
     event_category: 'CTA',
   });
 }
@@ -111,6 +112,7 @@ export function trackScrollDepth(page: string, depth: number): void {
   (window as any).gtag('event', 'scroll_depth', {
     page_path: page,
     scroll_depth_percent: depth,
+    page_location: window.location.href,
     event_category: 'Engagement',
   });
 }

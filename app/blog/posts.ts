@@ -60,6 +60,214 @@ export type BlogPost = {
 
   export const BLOG_POSTS: BlogPost[] = [
     {
+      id: 44,
+      title: "子供にスマホを持たせるルール｜後悔しないための約束の作り方と年齢別の考え方",
+      excerpt: "「そろそろスマホを持たせてもいいかな？」と悩む親御さんへ。渡した途端にゲーム・SNS漬け…という失敗を防ぐために、子供と一緒に決める「家族のスマホルール」の作り方と、年齢別の管理ポイントを解説します。",
+      date: "2026.03.24",
+      category: "ゲーム・スマホ",
+      tags: ["子供 スマホ ルール", "小学生 スマホ 何歳から", "子供 スマホ 使い過ぎ", "スマホ 時間制限 子供", "子供 スマホ 約束"],
+      emoji: "📱",
+      content: `
+        <h2>スマホを渡す前に「ルール」が9割を決める</h2>
+        <p>「友達みんな持ってるから」「連絡用だけだから」——こうして渡したスマホが、気づけば1日中手放さない状態に。<strong>多くの家庭で起きるこの失敗は、渡す前のルール設計の不備</strong>が原因です。</p>
+        <p>スマホは現代の子供にとって強力なツールであり、同時に際限なく時間を吸い取るリスクも持ちます。渡した後に「やっぱりダメ」と没収するのは関係を壊すだけ。<strong>最初の約束が一番大切</strong>です。</p>
+
+        <h2>何歳から持たせるべきか？年齢別の考え方</h2>
+
+        <h3>小学校低学年（6〜8歳）</h3>
+        <p>自制心・時間感覚がまだ未発達な時期。<strong>スマホより「キッズ携帯」や「iPod Touch的な端末</strong>（通話・GPS機能のみ）が適切です。フルスマホは早すぎる可能性が高いです。</p>
+
+        <h3>小学校中学年（9〜10歳）</h3>
+        <p>塾や習い事が増え、連絡手段として必要になってくる時期。<strong>フィルタリング必須・使用時間の上限設定</strong>をセットにすることが前提です。</p>
+
+        <h3>小学校高学年〜中学生（11歳〜）</h3>
+        <p>友達とのLINEやSNSへの関心が高まる時期。<strong>「持つ責任」を理解させた上でのルール合意</strong>が必要です。親が一方的に決めるより、子供と話し合って決めた方が守られやすくなります。</p>
+
+        <div class="bg-amber-50 p-4 rounded-lg my-6 border-l-4 border-amber-500">
+          <p class="font-bold text-amber-700 mb-2">年齢別のポイントまとめ</p>
+          <ul class="text-sm text-amber-800 space-y-1">
+            <li>低学年 → キッズ携帯・GPS端末を検討。フルスマホは見送りも選択肢</li>
+            <li>中学年 → フィルタリング＋時間制限をセットで渡す</li>
+            <li>高学年〜 → 子供と一緒にルールを作る。責任を持たせる</li>
+          </ul>
+        </div>
+
+        <h2>「家族のスマホルール」を作る5ステップ</h2>
+
+        <h3>① 使ってよい時間帯・場所を決める</h3>
+        <p>「ご飯中はNG」「寝室に持ち込まない」「21時以降は親が預かる」——<strong>時間と場所のルールが最も守られやすい</strong>ルールです。抽象的な「使い過ぎない」より、具体的な時間・場所の制約の方が機能します。</p>
+
+        <h3>② 1日の使用時間の上限を設定する</h3>
+        <p>iOSの「スクリーンタイム」・Androidの「Digital Wellbeing」で時間制限を設定します。<strong>子供と相談して決めた時間に設定</strong>することで、「親に制限された」ではなく「自分で決めた」という意識になります。</p>
+
+        <h3>③ SNS・課金アプリのルールを明確にする</h3>
+        <p>「LINE以外のSNSは中学生になるまでNG」「課金は必ず親に相談」など、<strong>やっていいこと・ダメなことを具体的にリスト化</strong>します。曖昧なままにすると「知らなかった」が起きます。</p>
+
+        <h3>④ 困ったときの報告ルールを作る</h3>
+        <p>知らない人から連絡が来た、嫌な画像を見た、友達とトラブルになった——<strong>「必ず親に報告する」という約束</strong>が子供をリスクから守ります。報告したことで怒られると、次は隠すようになります。報告してくれた行動を必ず褒めましょう。</p>
+
+        <h3>⑤ 定期的に「ルールを見直す」日を作る</h3>
+        <p>子供の成長に合わせてルールも変わるべきです。<strong>3ヶ月に1回、ルールを親子で見直す機会</strong>を設けると、子供が「ちゃんと考えてもらえている」と感じ、信頼関係が生まれます。</p>
+
+        <div class="bg-teal-50 p-4 rounded-lg my-6 border-l-4 border-teal-500">
+          <p class="font-bold text-teal-700 mb-2">家族ルール5項目チェックリスト</p>
+          <ol class="text-sm text-teal-800 space-y-2">
+            <li><strong>1.</strong> 使ってよい時間帯・場所を具体的に決めたか？</li>
+            <li><strong>2.</strong> 1日の上限時間をスクリーンタイムで設定したか？</li>
+            <li><strong>3.</strong> SNS・課金のルールを明確にリスト化したか？</li>
+            <li><strong>4.</strong> 困ったときの報告ルールを決めたか？</li>
+            <li><strong>5.</strong> 定期的に見直す日程を決めたか？</li>
+          </ol>
+        </div>
+
+        <h2>ルールを守らせる「仕組み」と「関係性」</h2>
+
+        <h3>親が守れないルールは子供も守らない</h3>
+        <p>「ご飯中スマホNG」と決めたなら、<strong>親自身もスマホを置く</strong>こと。子供は親の行動をよく見ています。ルールは家族全員が対象です。</p>
+
+        <h3>罰より「なぜそのルールがあるか」を伝える</h3>
+        <p>「睡眠が浅くなるから寝室はNG」「知らない人は危険だから報告するのがルール」——<strong>理由を理解している子供はルールを守りやすく</strong>なります。「ダメだからダメ」より「○○だからNG」と説明しましょう。</p>
+
+        <div class="bg-red-50 p-4 rounded-lg my-6 border-l-4 border-red-400">
+          <p class="font-bold text-red-700 mb-2">スマホ管理のNG行動</p>
+          <ul class="text-sm text-red-800 space-y-1">
+            <li>✗ 渡す前にルールを決めない（後出しルールは反発を招く）</li>
+            <li>✗ 親だけルールの例外になる（不公平感で反抗心が生まれる）</li>
+            <li>✗ 没収を罰として使う（次は隠す方法を覚えるだけ）</li>
+            <li>✗ 使用履歴を無断でチェックする（信頼関係を損なう）</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-xl my-8 border border-slate-200">
+          <h3 class="font-bold text-slate-800 mb-3">まとめ：後悔しないスマホの渡し方</h3>
+          <ul class="text-sm text-slate-700 space-y-2">
+            <li>✅ 渡す前にルールを子供と一緒に決める</li>
+            <li>✅ 時間・場所の制約は具体的に</li>
+            <li>✅ スクリーンタイムで物理的に制限する</li>
+            <li>✅ 困ったときの報告ルールを必ず設ける</li>
+            <li>✅ 親自身もルールを守る。3ヶ月ごとに見直す</li>
+          </ul>
+        </div>
+
+        ${CTA_GAMING}
+
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/30" class="text-teal-600 hover:underline font-bold">▶︎ ゲームがやめられない子供への科学的アプローチ</a></li>
+            <li><a href="/blog/22" class="text-teal-600 hover:underline font-bold">▶︎ 子供とのゲームルールの作り方</a></li>
+            <li><a href="/blog/17" class="text-teal-600 hover:underline font-bold">▶︎ 家庭のルールを子供に守らせる方法</a></li>
+          </ul>
+        </div>
+      `,
+    },
+    {
+      id: 43,
+      title: "子供の友達関係が心配…「友達ができない」「仲間外れ」に親はどう関わるべきか",
+      excerpt: "「うちの子、友達いるのかな」「一人でいることが多いみたい」——子供の友達関係の悩みは、親にとって胸が痛いものです。でも親が焦って介入すると逆効果になることも。発達段階に合わせた正しい関わり方と、家庭でできるサポートを解説します。",
+      date: "2026.03.24",
+      category: "コミュニケーション",
+      tags: ["子供 友達 できない", "子供 仲間外れ", "小学生 友達関係", "子供 一人ぼっち", "友達 増やす方法 子供"],
+      emoji: "👫",
+      content: `
+        <h2>「友達がいない」は本当に問題なのか？</h2>
+        <p>「うちの子、休み時間は一人で本を読んでいるらしい」「グループLINEに入っていない」——こういった話を聞いた親が感じる不安は自然なことです。</p>
+        <p>でも少し立ち止まって考えてみてください。<strong>「一人で過ごすこと」と「友達がいないこと」は別の問題</strong>です。内向的な子供が1〜2人の深い友達を大切にする関係性は、多くの友達と浅くつきあう関係性と同じくらい健全です。</p>
+        <p>問題なのは、<strong>「本人が孤独で苦しんでいるか」</strong>どうかです。親の不安と子供の現実を混同しないことが第一歩です。</p>
+
+        <h2>子供が友達を作りにくい理由</h2>
+
+        <h3>① コミュニケーションのスキル不足</h3>
+        <p>「どうやって声をかけたらいいかわからない」「会話が続かない」——友達を作るためのスキルは、<strong>自然に身につく子もいれば、教えてもらわないと難しい子もいます</strong>。特に内向的な子や感覚過敏がある子に多いです。</p>
+
+        <h3>② クラス・環境との相性</h3>
+        <p>同じクラスに気の合う子がいないだけで、環境が変わると自然に友達ができることも多いです。<strong>「今のクラスで浮いている」＝「友達を作れない子」ではありません</strong>。</p>
+
+        <h3>③ 仲間外れ・いじめの問題</h3>
+        <p>意図的に仲間外れにされているケースは別問題です。<strong>「一人でいる理由」を丁寧に聞く</strong>必要があります。子供が話せないなら担任への相談も視野に入れましょう。</p>
+
+        <div class="bg-amber-50 p-4 rounded-lg my-6 border-l-4 border-amber-500">
+          <p class="font-bold text-amber-700 mb-2">まず確認：子供は「孤独で苦しんでいる」か？</p>
+          <ul class="text-sm text-amber-800 space-y-1">
+            <li>本人が「寂しい」「学校に行きたくない」と言っている → 要サポート</li>
+            <li>一人でいるが楽しそう・家では活発 → 内向的な個性の可能性</li>
+            <li>特定の子から避けられている → いじめ・仲間外れの確認を</li>
+          </ul>
+        </div>
+
+        <h2>親が「やってはいけない」関わり方</h2>
+
+        <h3>NG①：「なんで友達作れないの？」と責める</h3>
+        <p>友達ができないことを責めると、子供は<strong>「自分はダメな子だ」という自己評価を持ち始めます</strong>。友達関係への不安がさらに増し、悪循環になります。</p>
+
+        <h3>NG②：親が直接介入・調整しようとする</h3>
+        <p>「○○ちゃんに遊んでって言ってみなよ」「グループに入れてって頼んで」と親が指示するほど、子供は<strong>「自分では動けない」という無力感</strong>を覚えます。</p>
+
+        <h3>NG③：「友達が多い方がいい」という価値観を押しつける</h3>
+        <p>友達の数は関係ありません。<strong>「1人でも心から信頼できる友達がいれば十分」</strong>という価値観を持てる親でいることが、子供の安定につながります。</p>
+
+        <div class="bg-red-50 p-4 rounded-lg my-6 border-l-4 border-red-400">
+          <p class="font-bold text-red-700 mb-2">友達関係への親のNG関与</p>
+          <ul class="text-sm text-red-800 space-y-1">
+            <li>✗ 「友達作れないの？」と責める</li>
+            <li>✗ 「○○ちゃんに声かけなさい」と直接指示する</li>
+            <li>✗ 「友達が多い子が社交的でいい子」という価値観の押しつけ</li>
+            <li>✗ 子供の友達関係を親が管理・調整しようとする</li>
+          </ul>
+        </div>
+
+        <h2>家庭でできる「友達ができやすい子」の育て方</h2>
+
+        <h3>① 家での会話を増やして「話す力」を育てる</h3>
+        <p>友達との会話力は、<strong>家族との会話の中で育ちます</strong>。「今日どうだった？」ではなく「今日一番楽しかったこと教えて」「誰かおもしろいことしてた？」と、具体的な質問で会話を引き出しましょう。</p>
+
+        <h3>② 習い事・地域活動で「学校外」のコミュニティを</h3>
+        <p>学校だけが友達を作る場所ではありません。スポーツ、音楽、プログラミング教室など、<strong>同じ興味を持つ子が集まる場</strong>は友達が作りやすい環境です。趣味が共通点になります。</p>
+
+        <h3>③ 「失敗してもいい」という安心感を与える</h3>
+        <p>「声をかけたら無視された」「遊びに誘ったら断られた」——これらは友達作りに必ず起きることです。<strong>「それは普通のことだよ。また試せばいい」</strong>と親が受け止めてあげることで、子供は再チャレンジできます。</p>
+
+        <h3>④ 「自分のことが好き」な子は友達が作りやすい</h3>
+        <p>自己肯定感が高い子は、<strong>「嫌われるかも」という恐怖より「一緒に遊べたら楽しいな」という期待</strong>で動けます。家での承認・褒め体験が、学校での行動力につながります。</p>
+
+        <div class="bg-teal-50 p-4 rounded-lg my-6 border-l-4 border-teal-500">
+          <p class="font-bold text-teal-700 mb-2">家庭でできるサポート4つ</p>
+          <ol class="text-sm text-teal-800 space-y-2">
+            <li><strong>1.</strong> 家族の会話を増やして「話す力」を育てる</li>
+            <li><strong>2.</strong> 学校外のコミュニティ（習い事・地域活動）を作る</li>
+            <li><strong>3.</strong> 失敗しても「また試せばいい」と伝える</li>
+            <li><strong>4.</strong> 自己肯定感を育てて「自分が好き」な子にする</li>
+          </ol>
+        </div>
+
+        <h2>もし「いじめ・仲間外れ」が疑われるときは</h2>
+        <p>子供が「学校行きたくない」「お腹が痛い」など身体症状を示す場合、意図的な仲間外れ・いじめの可能性があります。<strong>まず子供の話をじっくり聞き、担任に相談することを検討</strong>してください。</p>
+        <p>「過保護かな」と心配する必要はありません。子供が「親に話して助けてもらえた」という経験は、<strong>困ったときに大人に頼れる力</strong>の土台になります。</p>
+
+        <div class="bg-slate-50 p-6 rounded-xl my-8 border border-slate-200">
+          <h3 class="font-bold text-slate-800 mb-3">まとめ：子供の友達関係への親の関わり方</h3>
+          <ul class="text-sm text-slate-700 space-y-2">
+            <li>✅ 「一人でいる」と「孤独で苦しい」は別。まず子供の気持ちを確認する</li>
+            <li>✅ 責めず、直接介入せず、価値観を押しつけない</li>
+            <li>✅ 家での会話で「話す力」を育てる</li>
+            <li>✅ 学校外のコミュニティで友達の場を広げる</li>
+            <li>✅ 自己肯定感を高めて「自分から動ける子」にする</li>
+          </ul>
+        </div>
+
+        ${CTA_TASK_MANAGEMENT}
+
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
+            <li><a href="/blog/42" class="text-teal-600 hover:underline font-bold">▶︎ 子供が嘘をつく…なぜ？年齢別の正しい向き合い方</a></li>
+            <li><a href="/blog/33" class="text-teal-600 hover:underline font-bold">▶︎ 子供の自己肯定感を下げるNGな褒め方</a></li>
+            <li><a href="/blog/6" class="text-teal-600 hover:underline font-bold">▶︎ 子供の自己肯定感を育てる声かけの習慣</a></li>
+          </ul>
+        </div>
+      `,
+    },
+    {
       id: 42,
       title: "子供が嘘をつく…なぜ？どう対応する？年齢別・状況別の正しい向き合い方",
       excerpt: "「またウソついた！」と怒鳴ってしまった経験はありませんか？実は子供の嘘には種類があり、叱り方を間違えると「もっと上手に隠す子」を育ててしまいます。発達心理学から見た嘘の理由と、正直に話せる親子関係の作り方を解説します。",
@@ -162,9 +370,9 @@ export type BlogPost = {
 
         ${CTA_TASK_MANAGEMENT}
 
-        <div class="mt-8 p-4 bg-slate-50 rounded-xl border border-slate-100">
-          <p class="text-sm font-bold text-slate-600 mb-3">関連記事</p>
-          <ul class="space-y-2 text-sm">
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
             <li><a href="/blog/34" class="text-teal-600 hover:underline font-bold">▶︎ 子供が話を聞かない理由と「伝わる叱り方」</a></li>
             <li><a href="/blog/33" class="text-teal-600 hover:underline font-bold">▶︎ 子供の自己肯定感を下げるNGな褒め方</a></li>
             <li><a href="/blog/24" class="text-teal-600 hover:underline font-bold">▶︎ 子供の「なんで？」に答えられる親になる方法</a></li>
@@ -260,9 +468,9 @@ export type BlogPost = {
 
         ${CTA_TASK_MANAGEMENT}
 
-        <div class="mt-8 p-4 bg-slate-50 rounded-xl border border-slate-100">
-          <p class="text-sm font-bold text-slate-600 mb-3">関連記事</p>
-          <ul class="space-y-2 text-sm">
+        <div class="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+          <p class="text-sm font-bold text-slate-500 mb-4">あわせて読みたい</p>
+          <ul class="space-y-3">
             <li><a href="/blog/38" class="text-teal-600 hover:underline font-bold">▶︎ 忘れ物が多い子の対策｜チェックリストで解決</a></li>
             <li><a href="/blog/20" class="text-teal-600 hover:underline font-bold">▶︎ 子供の習慣化に「ゲーム化」が効く理由</a></li>
             <li><a href="/blog/8" class="text-teal-600 hover:underline font-bold">▶︎ 朝の支度が遅い子供を変えた「見える化」の力</a></li>

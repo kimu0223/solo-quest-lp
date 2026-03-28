@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CTAButton from "@/components/CTAButton";
 
 export default function Footer() {
   return (
@@ -24,6 +25,14 @@ export default function Footer() {
             <p className="text-xs font-medium text-slate-400 mt-2">
               日常を冒険に変える、親子で楽しむ成長RPG
             </p>
+            <CTAButton
+              href="https://apps.apple.com/jp/app/solo-quest/id6739063143"
+              label="App Store で無料DL"
+              eventLabel="footer_appstore_cta"
+              className="mt-4 inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-bold px-4 py-2 rounded-xl text-xs shadow hover:shadow-md transition-all duration-200"
+            >
+              App Store で無料DL
+            </CTAButton>
           </div>
 
           {/* 右側：リンク集 */}

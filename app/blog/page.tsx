@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CTAButton from '@/components/CTAButton';
 import { BLOG_POSTS } from './posts';
 
 export default function BlogPage() {
@@ -24,6 +25,24 @@ export default function BlogPage() {
           <div className="inline-block bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-bold mb-4 border border-teal-100">Blog</div>
           <h1 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">冒険の記録</h1>
           <p className="text-slate-500 font-medium">子育てを「もっと楽しく」するヒントをお届けします</p>
+        </div>
+
+        {/* ヒーロー直下：感情訴求CTAバナー */}
+        <div className="mb-10 bg-gradient-to-r from-amber-50 to-teal-50 rounded-3xl p-6 md:p-8 border border-amber-100 shadow-sm text-center">
+          <p className="text-base md:text-lg font-bold text-slate-700 mb-2 leading-snug">
+            「早くしなさい！」「宿題やったの？」毎日の声がけに疲れていませんか？
+          </p>
+          <p className="text-sm text-slate-500 mb-5">
+            Solo Quest は子供が<span className="text-teal-700 font-bold">自分から動く仕組み</span>を作るアプリです。
+          </p>
+          <CTAButton
+            href="https://apps.apple.com/jp/app/solo-quest/id6739063143"
+            label="無料で試してみる"
+            eventLabel="blog_list_hero_cta"
+            className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-black px-6 py-3 rounded-2xl text-sm shadow-md hover:shadow-lg transition-all duration-200"
+          >
+            無料で試してみる →
+          </CTAButton>
         </div>
 
         {/* 悩み別LP誘導バナー */}

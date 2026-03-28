@@ -18,12 +18,16 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     return { title: '記事が見つかりません | Solo Quest' };
   }
 
+  const shortExcerpt = post.excerpt.length > 100
+    ? post.excerpt.slice(0, 100) + '…解決策はこちら。'
+    : post.excerpt;
+
   return {
-    title: `${post.title} | Solo Quest`,
-    description: post.excerpt,
+    title: `${post.title} | 小学生の子育て相談室`,
+    description: shortExcerpt,
     openGraph: {
-      title: `${post.title} | Solo Quest`,
-      description: post.excerpt,
+      title: `${post.title} | 小学生の子育て相談室`,
+      description: shortExcerpt,
       type: 'article',
       publishedTime: post.date.replace(/\./g, '-'),
       url: `https://solo-quest.jp/blog/${post.id}`,

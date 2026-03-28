@@ -43,3 +43,5 @@ next-env.d.ts
 # GA4 credentials
 credentials.json
 ga4-report.json
+analytics-report.json
+ga4-report.json

@@ -18,8 +18,10 @@ export default function CTAButton({ href, eventLabel, className, children }: CTA
   const handleClick = () => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'cta_click', {
+        cta_label: eventLabel,
+        page_location: window.location.href,
+        cta_destination: href,
         event_category: 'engagement',
-        event_label: eventLabel,
       });
     }
   };

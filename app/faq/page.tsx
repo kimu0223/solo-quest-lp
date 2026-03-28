@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'よくある質問 | Solo Quest',
-  description: 'Solo Questに関するよくある質問をまとめました。料金、音声データの取り扱い、対象年齢など、保護者の方が気になる疑問にお答えします。',
+  title: 'よくある質問 | Solo Quest（ソロクエスト）子育てアプリ',
+  description: '「宿題しない」「ゲームやめない」「朝起きない」…子育ての悩みにSolo Questはどう答える？料金・安全性・対象年齢など保護者のよくある疑問を解説します。',
 };
 
 const faqJsonLd = {

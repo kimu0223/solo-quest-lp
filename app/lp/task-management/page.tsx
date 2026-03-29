@@ -19,9 +19,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "紙のチェックリストは続きませんでした。Solo Questは違いますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。紙のチェックリストは「やった・やってない」の記録にすぎませんが、Solo QuestはクリアのたびにAIが称えて経験値を与えます。達成感が伴うため、続けやすい設計です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "子供一人でタスクを管理できるようになりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questはタスクをクエスト化して「次に何をすべきか」を子供に明示します。親が毎回指示しなくても、子供が自分でアプリを確認して行動できるようになります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "宿題・お手伝い・習い事の練習など複数のタスクを管理できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。宿題・お手伝い・習い事・読書など複数のタスクをまとめてクエスト化できます。完了順序も自分で決めることで、自律性と段取り力が育ちます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "何歳から使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "主に小学1年生〜6年生を対象に設計しています。保護者の方と一緒に初期設定をすれば、低学年のお子様でも楽しく使えます。" }
+    }
+  ]
+};
+
 export default function TaskManagementLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

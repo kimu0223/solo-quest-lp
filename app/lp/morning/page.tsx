@@ -19,9 +19,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "毎朝何度起こしても起きません。Solo Questで変わりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questは朝のルーティンをゲームのクエストに変え、AIが「今日も勇者として起動した！」と称えます。朝起きることが「達成感のある行動」に変わることで、自ら起きる習慣が育ちます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "普通のアラームアプリと何が違いますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "アラームは「起こす」だけですが、Solo Questは「起きてからの行動」をゲーム化します。着替え・朝ごはん・歯磨きなど朝の支度全体をクエストにして、AIが進捗を実況します。" }
+    },
+    {
+      "@type": "Question",
+      "name": "夜更かしが続いている子供にも効果がありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questは就寝クエストも設定できるため、夜のルーティンからアプローチして生活リズムを整えることも可能です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "何歳から使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "主に小学1年生〜6年生を対象に設計しています。保護者の方がサポートしながら使えば幼稚園年長さんもご利用いただけます。" }
+    }
+  ]
+};
+
 export default function MorningLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

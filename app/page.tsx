@@ -81,7 +81,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-28 relative z-30">
             <CTAButton
-              href="https://docs.google.com/forms/d/e/...../viewform"
+              href="https://apps.apple.com/jp/app/solo-quest/id6739063143"
               label="無料で冒険を始める"
               eventLabel="hero_cta"
               className="group relative w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-lg neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
@@ -425,7 +425,7 @@ export default function Home() {
 
           <div className="mt-16">
             <CTAButton
-              href="https://docs.google.com/forms/d/e/...../viewform"
+              href="https://apps.apple.com/jp/app/solo-quest/id6739063143"
               label="今すぐ冒険を始める"
               eventLabel="bottom_cta"
               className="group relative w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-2xl font-black text-xl neon-button hover:scale-105 hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"

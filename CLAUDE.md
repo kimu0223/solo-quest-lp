@@ -1,5 +1,11 @@
 # Solo Quest LP — CLAUDE.md
 
+## 🔴 会話開始時の必須手順
+
+**毎回の会話で最初に必ず `docs/site-index.md` を読むこと。**
+このファイルを読めば `app/blog/posts.ts`（70K tokens）や各LPファイルを全読みしなくて済む。
+記事ID・LP一覧・CTA定数・App StoreURL・注意事項がすべて記載されている。
+
 ## プロジェクト概要
 
 子供向け教育アプリ「Solo Quest」のランディングページサイト。

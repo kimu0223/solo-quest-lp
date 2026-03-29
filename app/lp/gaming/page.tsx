@@ -19,9 +19,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ゲームを没収しても効果がないのはなぜですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "没収は「やめさせる力」を外から与えるだけで、子供自身が「やめる力」を育てません。Solo Questは子供が自分でゲームをやめる判断力と習慣を育てる設計です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "Solo Questを使うとゲーム時間を守れるようになりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questはゲームの時間ルールを親子で設定し、AIが終了時間を子供に伝える仕組みです。「AIに言われたから」やめられる体験を積み重ねることで、自制心が育ちます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "スマホ・タブレットのゲームにも対応していますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo QuestはiOSアプリとして動作し、どんな種類のゲームやスクリーンタイム管理にも応用できます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "何歳から使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "主に小学1年生〜6年生を対象に設計していますが、幼稚園年長さんや中学生の方にもご利用いただいています。" }
+    }
+  ]
+};
+
 export default function GamingLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

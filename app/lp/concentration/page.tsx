@@ -19,9 +19,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "すぐに気が散る子供に Solo Quest は効果がありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questは「タイムアタック」機能で制限時間内に集中するゲーム感覚のタスクを提供します。短い集中→達成→称賛のサイクルを繰り返すことで、集中できる時間が少しずつ伸びていきます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "ゲームなら集中できるのに勉強は集中できない理由は何ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "ゲームには「明確なゴール」「即時フィードバック」「適切な難易度」の3要素があります。Solo Questはこれらをそのまま勉強や日常タスクに応用することで、勉強でも同じ集中状態を引き出します。" }
+    },
+    {
+      "@type": "Question",
+      "name": "発達特性のある子供にも使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "Solo Questは発達特性の診断・治療を目的としたアプリではありませんが、視覚的なクエスト表示やAIの明確な指示が、注意の切り替えが苦手なお子様の助けになったとの声もいただいています。" }
+    },
+    {
+      "@type": "Question",
+      "name": "何歳から使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "主に小学1年生〜6年生を対象に設計しています。集中力の土台を作る4〜6歳のお子様にも保護者のサポートのもとでご利用いただけます。" }
+    }
+  ]
+};
+
 export default function ConcentrationLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

@@ -23,6 +23,33 @@ export const metadata: Metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "やることが多くてパニックになる子供に効果がありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questは複数のタスクを「今やるべき1つのクエスト」に絞り込む設計です。ワーキングメモリの負荷を減らし、目の前のことに集中できるようになります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "タイムアタック機能とは何ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "タスクに制限時間を設定してゲーム感覚でこなす機能です。「10分以内に宿題を終わらせるクエスト！」のようにカウントダウンすることで、ダラダラを防いで集中力を引き出します。" }
+    },
+    {
+      "@type": "Question",
+      "name": "宿題と遊びの優先順位を自分でつけられるようになりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questを続けることで「クエストをクリアしてから遊ぶ」という習慣が身につきます。親が毎回指示しなくても、子供自身が順序を判断できるようになります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "何歳から使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "主に小学1年生〜6年生を対象に設計しています。特に小学3〜5年生で「やること多すぎ」の悩みを持つご家庭に好評です。" }
+    }
+  ]
+};
+
 export default async function PriorityLP() {
   // A/Bテスト: バリアント取得（Middlewareがセットしたヘッダー or Cookie）
   const headersList = await headers();
@@ -41,6 +68,7 @@ export default async function PriorityLP() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">

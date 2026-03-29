@@ -19,9 +19,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "毎日声がけしないと宿題をしません。Solo Questで改善できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questは宿題をRPGのクエストに変換し、クリアするたびにAIが褒めます。「親に言われてやる」から「自分でやる」に変わる仕組みです。" }
+    },
+    {
+      "@type": "Question",
+      "name": "宿題以外のタスクにも使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。お手伝い・習い事の練習・読書など、どんな日常タスクでもクエスト化できます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "子供が宿題を終わらせたか確認できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。Solo Questでは子供が「クエストクリア！」と声で報告する仕組みのため、保護者も完了を把握しやすくなります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "何年生から使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "主に小学1年生〜6年生を対象に設計しています。ひらがなが読めるお子様であればご利用いただけます。" }
+    }
+  ]
+};
+
 export default function HomeworkLP() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Header />
 
       <main className="flex-grow pt-16">
